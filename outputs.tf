@@ -3,7 +3,7 @@
 ##############################################################################
 
 output "secret_id" {
-  value       = ibm_sm_iam_credentials_secret.sm_iam_credentials_secret.id
+  value       = ibm_sm_iam_credentials_secret.sm_iam_credentials_secret.secret_id
   description = "Secrets-Manager IAM secret ID containing ServiceID API key"
 }
 
