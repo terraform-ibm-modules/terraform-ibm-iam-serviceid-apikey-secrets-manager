@@ -36,7 +36,7 @@ module "resource_group" {
 
 module "secrets_manager" {
   source                   = "terraform-ibm-modules/secrets-manager/ibm"
-  version                  = "1.23.2"
+  version                  = "1.23.3"
   existing_sm_instance_crn = var.existing_sm_instance_crn
   resource_group_id        = module.resource_group.resource_group_id
   region                   = local.sm_region
@@ -51,7 +51,7 @@ module "secrets_manager" {
 module "iam_secrets_engine" {
   count                = var.existing_sm_instance_crn == null ? 1 : 0
   source               = "terraform-ibm-modules/secrets-manager-iam-engine/ibm"
-  version              = "1.2.6"
+  version              = "1.2.7"
   region               = local.sm_region
   secrets_manager_guid = module.secrets_manager.secrets_manager_guid
   iam_engine_name      = "generated_iam_engine"
