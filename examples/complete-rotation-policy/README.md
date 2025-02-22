@@ -17,7 +17,7 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 | <a name="module_dynamic_serviceid_apikey1"></a> [dynamic\_serviceid\_apikey1](#module\_dynamic\_serviceid\_apikey1) | ../.. | n/a |
 | <a name="module_iam_secrets_engine"></a> [iam\_secrets\_engine](#module\_iam\_secrets\_engine) | terraform-ibm-modules/secrets-manager-iam-engine/ibm | 1.2.7 |
 | <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | terraform-ibm-modules/resource-group/ibm | 1.1.6 |
-| <a name="module_secrets_manager"></a> [secrets\_manager](#module\_secrets\_manager) | terraform-ibm-modules/secrets-manager/ibm | 1.23.6 |
+| <a name="module_secrets_manager"></a> [secrets\_manager](#module\_secrets\_manager) | terraform-ibm-modules/secrets-manager/ibm | 1.23.7 |
 | <a name="module_secrets_manager_group_acct"></a> [secrets\_manager\_group\_acct](#module\_secrets\_manager\_group\_acct) | terraform-ibm-modules/secrets-manager-secret-group/ibm | 1.2.2 |
 | <a name="module_secrets_manager_group_service"></a> [secrets\_manager\_group\_service](#module\_secrets\_manager\_group\_service) | terraform-ibm-modules/secrets-manager-secret-group/ibm | 1.2.2 |
 
