@@ -12,9 +12,8 @@ locals {
       ? local.validate_sm_region_msg
   : ""))
 
-  sm_guid    = var.existing_sm_instance_guid == null ? module.secrets_manager.secrets_manager_guid : var.existing_sm_instance_guid
-  sm_region  = var.existing_sm_instance_region == null ? var.region : var.existing_sm_instance_region
-  sm_acct_id = var.existing_sm_instance_guid == null ? module.iam_secrets_engine[0].acct_secret_group_id : module.secrets_manager_group_acct[0].secret_group_id
+  sm_guid   = var.existing_sm_instance_guid == null ? module.secrets_manager.secrets_manager_guid : var.existing_sm_instance_guid
+  sm_region = var.existing_sm_instance_region == null ? var.region : var.existing_sm_instance_region
 }
 
 ##############################################################################
@@ -47,19 +46,18 @@ module "secrets_manager" {
 }
 
 
-# Configure instance with IAM engine
-module "iam_secrets_engine" {
-  count                = var.existing_sm_instance_guid == null ? 1 : 0
-  source               = "terraform-ibm-modules/secrets-manager-iam-engine/ibm"
-  version              = "1.2.10"
-  region               = var.region
-  secrets_manager_guid = module.secrets_manager.secrets_manager_guid
-  iam_engine_name      = "generated_iam_engine"
-}
+# # Configure instance with IAM engine
+# module "iam_secrets_engine" {
+#   count                = var.existing_sm_instance_guid == null ? 1 : 0
+#   source               = "terraform-ibm-modules/secrets-manager-iam-engine/ibm"
+#   version              = "1.2.10"
+#   region               = var.region
+#   secrets_manager_guid = module.secrets_manager.secrets_manager_guid
+#   iam_engine_name      = "generated_iam_engine"
+# }
 
 # Additional Secrets-Manager Secret-Group for SERVICE level secrets
 module "secrets_manager_group_acct" {
-  count                = var.existing_sm_instance_guid == null ? 0 : 1
   source               = "terraform-ibm-modules/secrets-manager-secret-group/ibm"
   version              = "1.3.2"
   region               = local.sm_region
@@ -99,7 +97,7 @@ resource "ibm_iam_service_policy" "secret_puller_policy" {
     service              = "secrets-manager"
     resource_instance_id = local.sm_guid
     resource_type        = "secret-group"
-    resource             = local.sm_acct_id
+    resource             = module.secrets_manager_group_acct.secret_group_id
   }
 }
 
