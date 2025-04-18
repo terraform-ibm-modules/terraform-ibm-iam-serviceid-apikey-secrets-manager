@@ -39,9 +39,10 @@ func setupOptions(t *testing.T, prefix string) *testhelper.TestOptions {
 		ResourceGroup:      resourceGroup,
 		BestRegionYAMLPath: "../common-dev-assets/common-go-assets/cloudinfo-region-secmgr-prefs.yaml",
 		TerraformVars: map[string]interface{}{
-			"existing_sm_instance_crn":    permanentResources["secretsManagerCRN"],
-			"existing_sm_instance_region": permanentResources["secretsManagerRegion"],
-			"resource_tags":               []string{prefix},
+			"existing_sm_instance_crn":      permanentResources["secretsManagerCRN"],
+			"existing_sm_instance_region":   permanentResources["secretsManagerRegion"],
+			"skip_iam_authorization_policy": true,
+			"resource_tags":                 []string{prefix},
 		},
 	})
 	return options
