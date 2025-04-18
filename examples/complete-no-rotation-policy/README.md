@@ -15,7 +15,6 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_dynamic_serviceid_apikey1"></a> [dynamic\_serviceid\_apikey1](#module\_dynamic\_serviceid\_apikey1) | ../.. | n/a |
-| <a name="module_iam_secrets_engine"></a> [iam\_secrets\_engine](#module\_iam\_secrets\_engine) | terraform-ibm-modules/secrets-manager-iam-engine/ibm | 1.2.10 |
 | <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | terraform-ibm-modules/resource-group/ibm | 1.2.0 |
 | <a name="module_secrets_manager"></a> [secrets\_manager](#module\_secrets\_manager) | terraform-ibm-modules/secrets-manager/ibm | 2.1.1 |
 | <a name="module_secrets_manager_group_acct"></a> [secrets\_manager\_group\_acct](#module\_secrets\_manager\_group\_acct) | terraform-ibm-modules/secrets-manager-secret-group/ibm | 1.3.2 |
@@ -39,6 +38,7 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 | <a name="input_region"></a> [region](#input\_region) | Region where resources will be created | `string` | `"au-syd"` | no |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | An existing resource group name to use for this example, if unset a new resource group will be created | `string` | `null` | no |
 | <a name="input_resource_tags"></a> [resource\_tags](#input\_resource\_tags) | Optional list of tags to be added to created resources | `list(string)` | `[]` | no |
+| <a name="input_skip_iam_authorization_policy"></a> [skip\_iam\_authorization\_policy](#input\_skip\_iam\_authorization\_policy) | Whether to skip the creation of the IAM authorization policies required to enable the IAM credentials engine. If set to false, policies will be created that grants the Secrets Manager instance 'Operator' access to the IAM identity service, and 'Groups Service Member Manage' access to the IAM groups service. | `bool` | `false` | no |
 | <a name="input_sm_iam_secret_name"></a> [sm\_iam\_secret\_name](#input\_sm\_iam\_secret\_name) | Name of SM IAM secret (dynamic ServiceID API Key) to be created | `string` | `"sm-iam-secret-puller"` | no |
 
 ### Outputs
