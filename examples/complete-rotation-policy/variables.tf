@@ -33,14 +33,19 @@ variable "resource_tags" {
   default     = []
 }
 
-variable "existing_sm_instance_guid" {
+variable "existing_sm_instance_crn" {
   type        = string
-  description = "Existing Secrets Manager GUID. If not provided an new instance will be provisioned"
+  description = "Existing Secrets Manager CRN. If not provided a new instance will be provisioned"
   default     = null
+
+  validation {
+    error_message = "When specifying an existing instance, both a region and a CRN must be passed."
+    condition     = var.existing_sm_instance_crn != null ? var.existing_sm_instance_region != null : true
+  }
 }
 
 variable "existing_sm_instance_region" {
   type        = string
-  description = "Existing Secrets Manager Region. Required if value is passed into var.existing_sm_instance_name"
+  description = "Existing Secrets Manager Region. Required if value is passed into var.existing_sm_instance_crn"
   default     = null
 }

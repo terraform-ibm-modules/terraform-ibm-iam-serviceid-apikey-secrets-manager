@@ -38,6 +38,11 @@ variable "existing_sm_instance_crn" {
   type        = string
   description = "Existing Secrets Manager CRN. If not provided a new instance will be provisioned"
   default     = null
+
+  validation {
+    error_message = "When specifying an existing instance, both a region and a CRN must be passed."
+    condition     = var.existing_sm_instance_crn != null ? var.existing_sm_instance_region != null : true
+  }
 }
 
 variable "existing_sm_instance_region" {
