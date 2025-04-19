@@ -51,7 +51,7 @@ module "secrets_manager" {
 module "iam_secrets_engine" {
   count                = var.existing_sm_instance_guid == null ? 1 : 0
   source               = "terraform-ibm-modules/secrets-manager-iam-engine/ibm"
-  version              = "1.2.10"
+  version              = "1.2.11"
   region               = var.region
   secrets_manager_guid = module.secrets_manager.secrets_manager_guid
   iam_engine_name      = "generated_iam_engine"
