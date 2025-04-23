@@ -32,7 +32,6 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_existing_sm_instance_crn"></a> [existing\_sm\_instance\_crn](#input\_existing\_sm\_instance\_crn) | Existing Secrets Manager CRN. If not provided a new instance will be provisioned | `string` | `null` | no |
-| <a name="input_existing_sm_instance_region"></a> [existing\_sm\_instance\_region](#input\_existing\_sm\_instance\_region) | Existing Secrets Manager Region. Required if value is passed into var.existing\_sm\_instance\_crn | `string` | `null` | no |
 | <a name="input_ibmcloud_api_key"></a> [ibmcloud\_api\_key](#input\_ibmcloud\_api\_key) | APIkey that's associated with the account to use, set via environment variable TF\_VAR\_ibmcloud\_api\_key or .tfvars file. | `string` | n/a | yes |
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | Prefix for name of all resource created by this example | `string` | `"test-iam-serviceid-apikey-sm-module"` | no |
 | <a name="input_region"></a> [region](#input\_region) | Region where resources will be created | `string` | `"au-syd"` | no |
@@ -45,7 +44,7 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 
 | Name | Description |
 |------|-------------|
-| <a name="output_secrets_manager_guid"></a> [secrets\_manager\_guid](#output\_secrets\_manager\_guid) | GUID of Secrets-Manager instance in which IAM engine was configured |
+| <a name="output_secrets_manager_crn"></a> [secrets\_manager\_crn](#output\_secrets\_manager\_crn) | CRN of Secrets-Manager instance in which IAM engine was configured |
 | <a name="output_service_secret_group_id"></a> [service\_secret\_group\_id](#output\_service\_secret\_group\_id) | Secret-group ID containing IAM secret |
 | <a name="output_sm_iam_secret_next_rotation_date"></a> [sm\_iam\_secret\_next\_rotation\_date](#output\_sm\_iam\_secret\_next\_rotation\_date) | Next rotation date for iam\_credential secret |
 | <a name="output_sm_iam_secret_puller_apikey_secret_id"></a> [sm\_iam\_secret\_puller\_apikey\_secret\_id](#output\_sm\_iam\_secret\_puller\_apikey\_secret\_id) | Secrets-Manager IAM secret ID containing ServiceID API key |

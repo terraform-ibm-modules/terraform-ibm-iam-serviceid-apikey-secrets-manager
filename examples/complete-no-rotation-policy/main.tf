@@ -3,7 +3,8 @@
 ##############################################################################
 
 locals {
-  sm_region = var.existing_sm_instance_region == null ? var.region : var.existing_sm_instance_region
+  parsed_existing_sm_instance_crn = var.existing_sm_instance_crn != null ? split(":", var.existing_sm_instance_crn) : []
+  sm_region                       = length(local.parsed_existing_sm_instance_crn) > 0 ? local.parsed_existing_sm_instance_crn[5] : var.region
 }
 
 ##############################################################################
