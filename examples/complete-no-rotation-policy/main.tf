@@ -3,17 +3,8 @@
 ##############################################################################
 
 locals {
-  validate_sm_region_cnd = var.existing_sm_instance_crn != null && var.existing_sm_instance_region == null
-  validate_sm_region_msg = "existing_sm_instance_region must also be set when value given for existing_sm_instance_crn."
-  # tflint-ignore: terraform_unused_declarations
-  validate_sm_region_chk = regex(
-    "^${local.validate_sm_region_msg}$",
-    (!local.validate_sm_region_cnd
-      ? local.validate_sm_region_msg
-  : ""))
-
-  sm_region  = var.existing_sm_instance_region == null ? var.region : var.existing_sm_instance_region
-  sm_acct_id = var.existing_sm_instance_crn == null ? module.iam_secrets_engine[0].acct_secret_group_id : module.secrets_manager_group_acct[0].secret_group_id
+  parsed_existing_sm_instance_crn = var.existing_sm_instance_crn != null ? split(":", var.existing_sm_instance_crn) : []
+  sm_region                       = length(local.parsed_existing_sm_instance_crn) > 0 ? local.parsed_existing_sm_instance_crn[5] : var.region
 }
 
 ##############################################################################
@@ -35,32 +26,21 @@ module "resource_group" {
 ## IAM user policy, SM instance, Service ID for IAM engine, IAM service ID policies, associated Service ID API key stored in a secret object in account level secret-group and IAM engine configuration
 
 module "secrets_manager" {
-  source                   = "terraform-ibm-modules/secrets-manager/ibm"
-  version                  = "2.1.1"
-  existing_sm_instance_crn = var.existing_sm_instance_crn
-  resource_group_id        = module.resource_group.resource_group_id
-  region                   = local.sm_region
-  secrets_manager_name     = "${var.prefix}-secrets-manager"
-  sm_service_plan          = "trial"
-  allowed_network          = "private-only"
-  endpoint_type            = "private"
-  sm_tags                  = var.resource_tags
-}
-
-# Configure instance with IAM engine
-module "iam_secrets_engine" {
-  count                = var.existing_sm_instance_crn == null ? 1 : 0
-  source               = "terraform-ibm-modules/secrets-manager-iam-engine/ibm"
-  version              = "1.2.10"
-  region               = local.sm_region
-  secrets_manager_guid = module.secrets_manager.secrets_manager_guid
-  iam_engine_name      = "generated_iam_engine"
-  endpoint_type        = "private"
+  source                        = "terraform-ibm-modules/secrets-manager/ibm"
+  version                       = "2.1.1"
+  existing_sm_instance_crn      = var.existing_sm_instance_crn
+  skip_iam_authorization_policy = var.skip_iam_authorization_policy
+  resource_group_id             = module.resource_group.resource_group_id
+  region                        = local.sm_region
+  secrets_manager_name          = "${var.prefix}-secrets-manager"
+  sm_service_plan               = "trial"
+  allowed_network               = "private-only"
+  endpoint_type                 = "private"
+  sm_tags                       = var.resource_tags
 }
 
 # Additional Secrets-Manager Secret-Group for SERVICE level secrets
 module "secrets_manager_group_acct" {
-  count                = var.existing_sm_instance_crn == null ? 0 : 1
   source               = "terraform-ibm-modules/secrets-manager-secret-group/ibm"
   version              = "1.3.2"
   region               = local.sm_region
@@ -102,7 +82,7 @@ resource "ibm_iam_service_policy" "secret_puller_policy" {
     service              = "secrets-manager"
     resource_instance_id = module.secrets_manager.secrets_manager_guid
     resource_type        = "secret-group"
-    resource             = local.sm_acct_id
+    resource             = module.secrets_manager_group_acct.secret_group_id
   }
 }
 

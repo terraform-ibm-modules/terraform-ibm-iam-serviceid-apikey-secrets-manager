@@ -39,9 +39,9 @@ func setupOptions(t *testing.T, prefix string) *testhelper.TestOptions {
 		ResourceGroup:      resourceGroup,
 		BestRegionYAMLPath: "../common-dev-assets/common-go-assets/cloudinfo-region-secmgr-prefs.yaml",
 		TerraformVars: map[string]interface{}{
-			"existing_sm_instance_guid":   permanentResources["secretsManagerGuid"],
-			"existing_sm_instance_region": permanentResources["secretsManagerRegion"],
-			"resource_tags":               []string{prefix},
+			"existing_sm_instance_crn":      permanentResources["secretsManagerCRN"],
+			"skip_iam_authorization_policy": true,
+			"resource_tags":                 []string{prefix},
 		},
 	})
 	return options
@@ -93,7 +93,7 @@ func TestPrivateInSchematics(t *testing.T) {
 		{Name: "region", Value: options.Region, DataType: "string"},
 		{Name: "prefix", Value: options.Prefix, DataType: "string"},
 		{Name: "existing_sm_instance_crn", Value: permanentResources["privateOnlySecMgrCRN"], DataType: "string"},
-		{Name: "existing_sm_instance_region", Value: permanentResources["privateOnlySecMgrRegion"], DataType: "string"},
+		{Name: "skip_iam_authorization_policy", Value: true, DataType: "bool"},
 	}
 
 	err := options.RunSchematicTest()

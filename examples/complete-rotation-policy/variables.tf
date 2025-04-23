@@ -33,14 +33,14 @@ variable "resource_tags" {
   default     = []
 }
 
-variable "existing_sm_instance_guid" {
+variable "existing_sm_instance_crn" {
   type        = string
-  description = "Existing Secrets Manager GUID. If not provided an new instance will be provisioned"
+  description = "Existing Secrets Manager CRN. If not provided a new instance will be provisioned"
   default     = null
 }
 
-variable "existing_sm_instance_region" {
-  type        = string
-  description = "Existing Secrets Manager Region. Required if value is passed into var.existing_sm_instance_name"
-  default     = null
+variable "skip_iam_authorization_policy" {
+  type        = bool
+  description = "Whether to skip the creation of the IAM authorization policies required to enable the IAM credentials engine. If set to false, policies will be created that grants the Secrets Manager instance 'Operator' access to the IAM identity service, and 'Groups Service Member Manage' access to the IAM groups service."
+  default     = false
 }
