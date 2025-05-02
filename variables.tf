@@ -71,12 +71,22 @@ variable "sm_iam_secret_auto_rotation_unit" {
   type        = string
   description = "Specifies the unit of time for rotation policy. Acceptable values are `day` or `month`."
   default     = "day" #tfsec:ignore:general-secrets-no-plaintext-exposure
+
+  validation {
+    condition     = var.sm_iam_secret_auto_rotation == false || contains(["day", "month"], var.sm_iam_secret_auto_rotation_unit)
+    error_message = "Value for `sm_iam_secret_auto_rotation_unit` must be either 'day' or 'month' when auto-rotation is enabled."
+  }
 }
 
 variable "sm_iam_secret_auto_rotation_interval" {
   type        = number
   description = "Specifies the rotation interval for the rotation policy."
   default     = 60
+
+  validation {
+    condition     = var.sm_iam_secret_auto_rotation == false || var.sm_iam_secret_auto_rotation_interval > 0
+    error_message = "Value for `sm_iam_secret_auto_rotation_interval` must be greater than 0 when auto-rotation is enabled."
+  }
 }
 
 ##############################################################################
