@@ -4,15 +4,8 @@
 # Creates a dynamic ServiceID API Key stored and managed in a Secrets-Manager secret
 ##############################################################################
 
-# Validation
-# Approach based on https://stackoverflow.com/a/66682419
 locals {
-  # validate auto rotation
-  auto_rotation_validate_condition = var.sm_iam_secret_auto_rotation == true && var.sm_iam_secret_auto_rotation_unit != "month" && var.sm_iam_secret_auto_rotation_unit != "day" || var.sm_iam_secret_auto_rotation == true && var.sm_iam_secret_auto_rotation_interval == 0
-  auto_rotation_validate_msg       = "Value for `sm_iam_secret_auto_rotation_unit' must be either `day` or `month` and value for `sm_iam_secret_auto_rotation_interval` must be higher than 0"
-  # tflint-ignore: terraform_unused_declarations
-  auto_rotation_validate_check = regex("^${local.auto_rotation_validate_msg}$", (!local.auto_rotation_validate_condition ? local.auto_rotation_validate_msg : ""))
-  auto_rotation_enabled        = var.sm_iam_secret_auto_rotation == true ? [1] : []
+  auto_rotation_enabled = var.sm_iam_secret_auto_rotation == true ? [1] : []
 }
 
 resource "ibm_sm_iam_credentials_secret" "sm_iam_credentials_secret" {
