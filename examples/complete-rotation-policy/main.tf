@@ -27,7 +27,7 @@ module "resource_group" {
 
 module "secrets_manager" {
   source                        = "terraform-ibm-modules/secrets-manager/ibm"
-  version                       = "2.2.9"
+  version                       = "2.2.10"
   existing_sm_instance_crn      = var.existing_sm_instance_crn
   skip_iam_authorization_policy = var.skip_iam_authorization_policy
   resource_group_id             = module.resource_group.resource_group_id
