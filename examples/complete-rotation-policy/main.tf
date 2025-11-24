@@ -72,7 +72,7 @@ resource "ibm_iam_service_id" "secret_puller" {
 }
 
 resource "ibm_iam_service_policy" "secret_puller_policy" {
-  iam_service_id = ibm_iam_service_id.secret_puller.id
+  iam_id = ibm_iam_service_id.secret_puller.iam_id
   roles          = ["Viewer", "SecretsReader"]
 
   resources {

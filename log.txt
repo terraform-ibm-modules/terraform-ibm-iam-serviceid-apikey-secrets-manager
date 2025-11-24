@@ -1,0 +1,1119 @@
+cd tests && go test -run '' -count=1 -v -timeout 600m
+=== RUN   TestRunDefaultExample
+=== PAUSE TestRunDefaultExample
+=== RUN   TestRunUpgradeExample
+=== PAUSE TestRunUpgradeExample
+=== RUN   TestPrivateInSchematics
+=== PAUSE TestPrivateInSchematics
+=== CONT  TestRunDefaultExample
+=== CONT  TestRunUpgradeExample
+=== CONT  TestPrivateInSchematics
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 API cache disabled
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 API cache disabled
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 API cache disabled
+2025/11/24 09:27:31 Region br-sao VPC count: 4
+2025/11/24 09:27:31 --- new best region is br-sao
+2025/11/24 09:27:31 Region br-sao VPC count: 4
+2025/11/24 09:27:31 --- new best region is br-sao
+2025/11/24 09:27:31 Region br-sao VPC count: 4
+2025/11/24 09:27:31 --- new best region is br-sao
+2025/11/24 09:27:34 Region ca-tor VPC count: 7
+2025/11/24 09:27:35 Region ca-tor VPC count: 7
+2025/11/24 09:27:35 Region ca-tor VPC count: 7
+2025/11/24 09:27:39 Region au-syd VPC count: 10
+2025/11/24 09:27:39 Region au-syd VPC count: 10
+2025/11/24 09:27:40 Region au-syd VPC count: 10
+2025/11/24 09:27:41 Region eu-de VPC count: 5
+2025/11/24 09:27:42 Region eu-de VPC count: 5
+2025/11/24 09:27:42 Region eu-de VPC count: 5
+2025/11/24 09:27:44 Region eu-gb VPC count: 5
+2025/11/24 09:27:44 Region eu-gb VPC count: 5
+2025/11/24 09:27:44 Region eu-gb VPC count: 5
+2025/11/24 09:27:48 Region jp-osa VPC count: 8
+2025/11/24 09:27:48 Region jp-osa VPC count: 8
+2025/11/24 09:27:48 Region jp-osa VPC count: 8
+2025/11/24 09:27:51 Region jp-tok VPC count: 7
+2025/11/24 09:27:51 Best region was found!: br-sao
+2025/11/24 09:27:51 Region jp-tok VPC count: 7
+2025/11/24 09:27:51 Best region was found!: br-sao
+TestRunDefaultExample 2025-11-24T09:27:51+05:30 tests.go:75: TEMP CREATED:  /var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-iam-svcid-apikey-sm-i9a415712366
+TestRunDefaultExample 2025-11-24T09:27:51+05:30 tests.go:596: START: Init / Apply / Consistency Check
+TestRunDefaultExample 2025-11-24T09:27:51+05:30 tests.go:675: START: Init / Apply
+TestRunDefaultExample 2025-11-24T09:27:51+05:30 retry.go:91: terraform [init -upgrade=true]
+TestRunDefaultExample 2025-11-24T09:27:51+05:30 logger.go:67: Running command terraform with args [init -upgrade=true]
+2025/11/24 09:27:51 Region jp-tok VPC count: 7
+2025/11/24 09:27:51 Best region was found!: br-sao
+TestRunUpgradeExample 2025-11-24T09:27:51+05:30 tests.go:355: PR Branch: 16377-issue
+TestRunDefaultExample 2025-11-24T09:27:51+05:30 logger.go:67: [0m[1mInitializing the backend...[0m
+TestRunDefaultExample 2025-11-24T09:27:51+05:30 logger.go:67: [0m[1mUpgrading modules...[0m
+TestRunDefaultExample 2025-11-24T09:27:51+05:30 logger.go:67: - dynamic_serviceid_apikey1 in ../..
+TestRunDefaultExample 2025-11-24T09:27:51+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/resource-group/ibm 1.4.0 for resource_group...
+TestRunUpgradeExample 2025-11-24T09:27:51+05:30 tests.go:363: Base Repo: https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager.git
+TestRunUpgradeExample 2025-11-24T09:27:51+05:30 tests.go:364: Base Branch: main
+TestRunUpgradeExample 2025-11-24T09:27:51+05:30 git.go:510: Remote name: upstream-ykc1dm
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 API cache disabled
+    tests.go:347: [SCHEMATICS] Random Workspace region chosen: eu
+    schematics.go:123: [SCHEMATICS] Schematics API for region eu: https://eu.schematics.cloud.ibm.com
+TestRunUpgradeExample 2025-11-24T09:27:52+05:30 git.go:525: Fetch output:
+ []
+Commit Messages (main): 
+TestRunUpgradeExample 2025-11-24T09:27:52+05:30 tests.go:396: Temporarily disabling UseTerraformWorkspace in Upgrade Test as temporary directories are used instead of workspaces
+TestRunUpgradeExample 2025-11-24T09:27:52+05:30 tests.go:417: TEMP PR DIR CREATED:  /var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-pr-iam-svcid-apikey-sm-upg-buf367338164
+TestRunUpgradeExample 2025-11-24T09:27:52+05:30 tests.go:429: TEMP UPGRADE BASE DIR CREATED:  /var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-base-iam-svcid-apikey-sm-upg-buf1432922827
+TestRunUpgradeExample 2025-11-24T09:27:52+05:30 tests.go:452: Copied current code to PR branch dir: /var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-pr-iam-svcid-apikey-sm-upg-buf367338164
+    tests.go:101: [SCHEMATICS] Creating Test Workspace
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 git.go:601: Cloned base repo and branch with authentication
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 tests.go:487: Init / Apply on Base repo: https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager.git
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 tests.go:488: Init / Apply on Base branch: main
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 tests.go:489: Init / Apply on Base branch dir: /var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-base-iam-svcid-apikey-sm-upg-buf1432922827/examples/complete-rotation-policy
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 retry.go:91: terraform [init -upgrade=true]
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 logger.go:67: Running command terraform with args [init -upgrade=true]
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 logger.go:67: [0m[1mInitializing the backend...[0m
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 logger.go:67: [0m[1mUpgrading modules...[0m
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 logger.go:67: - dynamic_serviceid_apikey1 in ../..
+TestRunUpgradeExample 2025-11-24T09:27:53+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/resource-group/ibm 1.4.0 for resource_group...
+TestRunDefaultExample 2025-11-24T09:27:54+05:30 logger.go:67: - resource_group in .terraform/modules/resource_group
+TestRunDefaultExample 2025-11-24T09:27:54+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager/ibm 2.11.9 for secrets_manager...
+    schematics.go:208: [SCHEMATICS] Created workspace: iam-svcid-apikey-sm-priv-3c9 (ID: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6)
+    tests.go:107: [SCHEMATICS] Workspace Created: iam-svcid-apikey-sm-priv-3c9 (eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6)
+    tests.go:124: Starting with variable validation for branch: 16377-issue 
+    schematics.go:216: [SCHEMATICS] Creating TAR file
+    schematics.go:222: [SCHEMATICS] Uploading TAR file
+TestRunUpgradeExample 2025-11-24T09:27:56+05:30 logger.go:67: - resource_group in .terraform/modules/resource_group
+TestRunUpgradeExample 2025-11-24T09:27:56+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager/ibm 2.11.9 for secrets_manager...
+TestRunDefaultExample 2025-11-24T09:27:57+05:30 logger.go:67: - secrets_manager in .terraform/modules/secrets_manager
+TestRunDefaultExample 2025-11-24T09:27:57+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/cbr/ibm 1.33.8 for secrets_manager.cbr_rule...
+    schematics.go:310: [SCHEMATICS] Uploaded TAR to workspace: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6
+TestRunUpgradeExample 2025-11-24T09:27:59+05:30 logger.go:67: - secrets_manager in .terraform/modules/secrets_manager
+TestRunUpgradeExample 2025-11-24T09:28:00+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/cbr/ibm 1.33.8 for secrets_manager.cbr_rule...
+TestRunDefaultExample 2025-11-24T09:28:00+05:30 logger.go:67: - secrets_manager.cbr_rule in .terraform/modules/secrets_manager.cbr_rule/modules/cbr-rule-module
+TestRunDefaultExample 2025-11-24T09:28:00+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/common-utilities/ibm 1.3.0 for secrets_manager.kms_key_crn_parser...
+TestRunDefaultExample 2025-11-24T09:28:02+05:30 logger.go:67: - secrets_manager.kms_key_crn_parser in .terraform/modules/secrets_manager.kms_key_crn_parser/modules/crn-parser
+TestRunDefaultExample 2025-11-24T09:28:02+05:30 logger.go:67: - secrets_manager.secrets in .terraform/modules/secrets_manager/modules/secrets
+TestRunDefaultExample 2025-11-24T09:28:02+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager-secret-group/ibm 1.3.16 for secrets_manager.secrets.secret_groups...
+TestRunUpgradeExample 2025-11-24T09:28:03+05:30 logger.go:67: - secrets_manager.cbr_rule in .terraform/modules/secrets_manager.cbr_rule/modules/cbr-rule-module
+TestRunUpgradeExample 2025-11-24T09:28:03+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/common-utilities/ibm 1.3.0 for secrets_manager.kms_key_crn_parser...
+TestRunUpgradeExample 2025-11-24T09:28:05+05:30 logger.go:67: - secrets_manager.kms_key_crn_parser in .terraform/modules/secrets_manager.kms_key_crn_parser/modules/crn-parser
+TestRunUpgradeExample 2025-11-24T09:28:05+05:30 logger.go:67: - secrets_manager.secrets in .terraform/modules/secrets_manager/modules/secrets
+TestRunUpgradeExample 2025-11-24T09:28:05+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager-secret-group/ibm 1.3.16 for secrets_manager.secrets.secret_groups...
+TestRunDefaultExample 2025-11-24T09:28:06+05:30 logger.go:67: - secrets_manager.secrets.secret_groups in .terraform/modules/secrets_manager.secrets.secret_groups
+TestRunDefaultExample 2025-11-24T09:28:06+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/iam-access-group/ibm 1.5.14 for secrets_manager.secrets.secret_groups.iam_access_groups...
+TestRunUpgradeExample 2025-11-24T09:28:08+05:30 logger.go:67: - secrets_manager.secrets.secret_groups in .terraform/modules/secrets_manager.secrets.secret_groups
+TestRunUpgradeExample 2025-11-24T09:28:08+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/iam-access-group/ibm 1.5.14 for secrets_manager.secrets.secret_groups.iam_access_groups...
+TestRunDefaultExample 2025-11-24T09:28:09+05:30 logger.go:67: - secrets_manager.secrets.secret_groups.iam_access_groups in .terraform/modules/secrets_manager.secrets.secret_groups.iam_access_groups
+TestRunDefaultExample 2025-11-24T09:28:09+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager-secret/ibm 1.9.1 for secrets_manager.secrets.secrets...
+TestRunUpgradeExample 2025-11-24T09:28:12+05:30 logger.go:67: - secrets_manager.secrets.secret_groups.iam_access_groups in .terraform/modules/secrets_manager.secrets.secret_groups.iam_access_groups
+TestRunUpgradeExample 2025-11-24T09:28:12+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager-secret/ibm 1.9.1 for secrets_manager.secrets.secrets...
+TestRunDefaultExample 2025-11-24T09:28:13+05:30 logger.go:67: - secrets_manager.secrets.secrets in .terraform/modules/secrets_manager.secrets.secrets
+TestRunDefaultExample 2025-11-24T09:28:13+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager-secret-group/ibm 1.3.17 for secrets_manager_group_acct...
+TestRunUpgradeExample 2025-11-24T09:28:14+05:30 logger.go:67: - secrets_manager.secrets.secrets in .terraform/modules/secrets_manager.secrets.secrets
+TestRunUpgradeExample 2025-11-24T09:28:14+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager-secret-group/ibm 1.3.17 for secrets_manager_group_acct...
+TestRunDefaultExample 2025-11-24T09:28:16+05:30 logger.go:67: - secrets_manager_group_acct in .terraform/modules/secrets_manager_group_acct
+TestRunDefaultExample 2025-11-24T09:28:16+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/iam-access-group/ibm 1.5.15 for secrets_manager_group_acct.iam_access_groups...
+TestRunUpgradeExample 2025-11-24T09:28:17+05:30 logger.go:67: - secrets_manager_group_acct in .terraform/modules/secrets_manager_group_acct
+TestRunUpgradeExample 2025-11-24T09:28:17+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/iam-access-group/ibm 1.5.15 for secrets_manager_group_acct.iam_access_groups...
+TestRunDefaultExample 2025-11-24T09:28:19+05:30 logger.go:67: - secrets_manager_group_acct.iam_access_groups in .terraform/modules/secrets_manager_group_acct.iam_access_groups
+TestRunDefaultExample 2025-11-24T09:28:19+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager-secret-group/ibm 1.3.17 for secrets_manager_group_service...
+TestRunDefaultExample 2025-11-24T09:28:19+05:30 logger.go:67: - secrets_manager_group_service in .terraform/modules/secrets_manager_group_service
+TestRunDefaultExample 2025-11-24T09:28:19+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/iam-access-group/ibm 1.5.15 for secrets_manager_group_service.iam_access_groups...
+TestRunDefaultExample 2025-11-24T09:28:19+05:30 logger.go:67: - secrets_manager_group_service.iam_access_groups in .terraform/modules/secrets_manager_group_service.iam_access_groups
+TestRunDefaultExample 2025-11-24T09:28:19+05:30 logger.go:67: [0m[1mInitializing provider plugins...[0m
+TestRunDefaultExample 2025-11-24T09:28:19+05:30 logger.go:67: - Finding ibm-cloud/ibm versions matching ">= 1.51.0, >= 1.70.0, >= 1.79.0, < 2.0.0"...
+TestRunDefaultExample 2025-11-24T09:28:19+05:30 logger.go:67: - Finding hashicorp/time versions matching ">= 0.9.1, < 1.0.0"...
+TestRunDefaultExample 2025-11-24T09:28:20+05:30 logger.go:67: - Installing ibm-cloud/ibm v1.85.0...
+TestRunUpgradeExample 2025-11-24T09:28:22+05:30 logger.go:67: - secrets_manager_group_acct.iam_access_groups in .terraform/modules/secrets_manager_group_acct.iam_access_groups
+TestRunUpgradeExample 2025-11-24T09:28:22+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/secrets-manager-secret-group/ibm 1.3.17 for secrets_manager_group_service...
+TestRunUpgradeExample 2025-11-24T09:28:22+05:30 logger.go:67: - secrets_manager_group_service in .terraform/modules/secrets_manager_group_service
+TestRunUpgradeExample 2025-11-24T09:28:22+05:30 logger.go:67: Downloading registry.terraform.io/terraform-ibm-modules/iam-access-group/ibm 1.5.15 for secrets_manager_group_service.iam_access_groups...
+TestRunUpgradeExample 2025-11-24T09:28:22+05:30 logger.go:67: - secrets_manager_group_service.iam_access_groups in .terraform/modules/secrets_manager_group_service.iam_access_groups
+TestRunUpgradeExample 2025-11-24T09:28:22+05:30 logger.go:67: [0m[1mInitializing provider plugins...[0m
+TestRunUpgradeExample 2025-11-24T09:28:22+05:30 logger.go:67: - Finding ibm-cloud/ibm versions matching ">= 1.51.0, >= 1.70.0, >= 1.79.0, < 2.0.0"...
+TestRunUpgradeExample 2025-11-24T09:28:22+05:30 logger.go:67: - Finding hashicorp/time versions matching ">= 0.9.1, < 1.0.0"...
+TestRunUpgradeExample 2025-11-24T09:28:23+05:30 logger.go:67: - Installing ibm-cloud/ibm v1.85.0...
+TestRunDefaultExample 2025-11-24T09:28:35+05:30 logger.go:67: - Installed ibm-cloud/ibm v1.85.0 (self-signed, key ID [0m[1mAAD3B791C49CC253[0m[0m)
+TestRunDefaultExample 2025-11-24T09:28:35+05:30 logger.go:67: - Installing hashicorp/time v0.13.1...
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: - Installed hashicorp/time v0.13.1 (signed by HashiCorp)
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: Partner and community providers are signed by their developers.
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: If you'd like to know more about provider signing, you can read about it here:
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: https://www.terraform.io/docs/cli/plugins/signing.html
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: selections it made above. Include this file in your version control repository
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: so that Terraform can guarantee to make the same selections by default when
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: you run "terraform init" in the future.[0m
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: 
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: [0m[32m
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: You may now begin working with Terraform. Try running "terraform plan" to see
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: any changes that are required for your infrastructure. All Terraform commands
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: should now work.
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: 
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: If you ever set or change modules or backend configuration for Terraform,
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: rerun this command to reinitialize your working directory. If you forget, other
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: commands will detect it and remind you to do so if necessary.[0m
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 retry.go:91: terraform [apply -input=false -auto-approve -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var prefix=iam-svcid-apikey-sm-i9a -var region=br-sao -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm"] -var skip_iam_authorization_policy=true -lock=false]
+TestRunDefaultExample 2025-11-24T09:28:37+05:30 logger.go:67: Running command terraform with args [apply -input=false -auto-approve -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var prefix=iam-svcid-apikey-sm-i9a -var region=br-sao -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm"] -var skip_iam_authorization_policy=true -lock=false]
+TestRunUpgradeExample 2025-11-24T09:28:38+05:30 logger.go:67: - Installed ibm-cloud/ibm v1.85.0 (self-signed, key ID [0m[1mAAD3B791C49CC253[0m[0m)
+TestRunUpgradeExample 2025-11-24T09:28:39+05:30 logger.go:67: - Installing hashicorp/time v0.13.1...
+TestRunDefaultExample 2025-11-24T09:28:40+05:30 logger.go:67: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Reading...[0m[0m
+TestRunDefaultExample 2025-11-24T09:28:40+05:30 logger.go:67: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: - Installed hashicorp/time v0.13.1 (signed by HashiCorp)
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: Partner and community providers are signed by their developers.
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: If you'd like to know more about provider signing, you can read about it here:
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: https://www.terraform.io/docs/cli/plugins/signing.html
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: selections it made above. Include this file in your version control repository
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: so that Terraform can guarantee to make the same selections by default when
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: you run "terraform init" in the future.[0m
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: [0m[32m
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: You may now begin working with Terraform. Try running "terraform plan" to see
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: any changes that are required for your infrastructure. All Terraform commands
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: should now work.
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: If you ever set or change modules or backend configuration for Terraform,
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: rerun this command to reinitialize your working directory. If you forget, other
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: commands will detect it and remind you to do so if necessary.[0m
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 retry.go:91: terraform [apply -input=false -auto-approve -var prefix=iam-svcid-apikey-sm-upg-buf -var region=br-sao -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm-upg"] -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var skip_iam_authorization_policy=true -lock=false]
+TestRunUpgradeExample 2025-11-24T09:28:40+05:30 logger.go:67: Running command terraform with args [apply -input=false -auto-approve -var prefix=iam-svcid-apikey-sm-upg-buf -var region=br-sao -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm-upg"] -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var skip_iam_authorization_policy=true -lock=false]
+TestRunDefaultExample 2025-11-24T09:28:41+05:30 logger.go:67: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Read complete after 2s [id=e11a55e356cc42f78822b1aa5d3a41a5][0m
+TestRunDefaultExample 2025-11-24T09:28:41+05:30 logger.go:67: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:42+05:30 logger.go:67: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:42+05:30 logger.go:67: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Reading...[0m[0m
+TestRunDefaultExample 2025-11-24T09:28:44+05:30 logger.go:67: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Read complete after 4s [id=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::][0m
+TestRunUpgradeExample 2025-11-24T09:28:44+05:30 logger.go:67: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Read complete after 1s [id=e11a55e356cc42f78822b1aa5d3a41a5][0m
+TestRunUpgradeExample 2025-11-24T09:28:44+05:30 logger.go:67: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:45+05:30 logger.go:67: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Read complete after 2s [id=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::][0m
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Read complete after 2s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667][0m
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Read complete after 4s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667][0m
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: Terraform used the selected providers to generate the following execution
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: plan. Resource actions are indicated with the following symbols:
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: Terraform used the selected providers to generate the following execution
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: plan. Resource actions are indicated with the following symbols:
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m create[0m
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: Terraform will perform the following actions:
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # ibm_iam_service_id.secret_puller[0m will be created
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_iam_service_id" "secret_puller" {
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m crn         = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m create[0m
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m description = "ServiceID that can pull secrets from Secret Manager"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m iam_id      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id          = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m locked      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m name        = "sid:0.0.1:iam-svcid-apikey-sm-upg-buf-secret-puller:automated:simple-service:secret-manager:"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m version     = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # ibm_iam_service_policy.secret_puller_policy[0m will be created
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_iam_service_policy" "secret_puller_policy" {
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: Terraform will perform the following actions:
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m account_management = false
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m iam_id             = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m iam_service_id     = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id                 = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # ibm_iam_service_id.secret_puller[0m will be created
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m roles              = [
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_iam_service_id" "secret_puller" {
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m "Viewer",
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m "SecretsReader",
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:         ]
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m transaction_id     = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m resources {
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m crn         = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m resource             = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m resource_instance_id = "79c6d411-c18f-4670-b009-b0044a238667"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m resource_type        = "secret-group"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m service              = "secrets-manager"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:         }
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m description = "ServiceID that can pull secrets from Secret Manager"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m iam_id      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # module.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret[0m will be created
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id          = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m locked      = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m name        = "sid:0.0.1:iam-svcid-apikey-sm-i9a-secret-puller:automated:simple-service:secret-manager:"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_sm_iam_credentials_secret" "sm_iam_credentials_secret" {
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m account_id           = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m api_key              = (sensitive value)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m api_key_id           = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m created_at           = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m version     = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m created_by           = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m crn                  = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m custom_metadata      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m description          = "Example of dynamic IAM secret / apikey"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m downloaded           = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m endpoint_type        = "public"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # ibm_iam_service_policy.secret_puller_policy[0m will be created
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_iam_service_policy" "secret_puller_policy" {
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m expiration_date      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id                   = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m account_management = false
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m iam_id             = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m iam_service_id     = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id                 = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m roles              = [
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m "Viewer",
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m "SecretsReader",
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:         ]
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m instance_id          = "79c6d411-c18f-4670-b009-b0044a238667"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m labels               = [
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m "iam-svcid-apikey-sm-upg",
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m transaction_id     = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:         ]
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m locks_total          = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m name                 = "iam-svcid-apikey-sm-upg-buf-sm-iam-secret-puller"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m next_rotation_date   = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m region               = "us-south"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m resources {
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m resource             = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m resource_instance_id = "79c6d411-c18f-4670-b009-b0044a238667"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m resource_type        = "secret-group"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m service              = "secrets-manager"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:         }
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m retrieved_at         = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m reuse_api_key        = true
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_group_id      = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # module.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret[0m will be created
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_id            = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_type          = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m service_id           = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_sm_iam_credentials_secret" "sm_iam_credentials_secret" {
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m account_id           = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m service_id_is_static = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m state                = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m api_key              = (sensitive value)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m api_key_id           = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m created_at           = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m created_by           = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m crn                  = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m state_description    = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m ttl                  = "7776000"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m updated_at           = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m custom_metadata      = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m description          = "Example of dynamic IAM secret / apikey"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m downloaded           = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m versions_total       = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m rotation {
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m endpoint_type        = "public"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m expiration_date      = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id                   = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m instance_id          = "79c6d411-c18f-4670-b009-b0044a238667"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m labels               = [
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m auto_rotate = true
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m interval    = 60
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m unit        = "day"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m "iam-svcid-apikey-sm",
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:         ]
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m locks_total          = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m name                 = "iam-svcid-apikey-sm-i9a-sm-iam-secret-puller"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m next_rotation_date   = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m region               = "us-south"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m retrieved_at         = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:         }
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # module.secrets_manager_group_acct.ibm_sm_secret_group.secret_group[0m will be created
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m reuse_api_key        = true
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_group_id      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m created_at      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m description     = "Secret-Group for storing account credentials"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m endpoint_type   = "public"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id              = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_id            = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_type          = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m service_id           = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m name            = "iam-svcid-apikey-sm-upg-buf-account-secret-group"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m region          = "us-south"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m service_id_is_static = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m state                = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m state_description    = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m ttl                  = "7776000"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m updated_at           = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m versions_total       = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_group_id = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m updated_at      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m rotation {
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m auto_rotate = true
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m interval    = 60
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:           [32m+[0m[0m unit        = "day"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # module.secrets_manager_group_service.ibm_sm_secret_group.secret_group[0m will be created
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:         }
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # module.secrets_manager_group_acct.ibm_sm_secret_group.secret_group[0m will be created
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m created_at      = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m description     = "Secret-Group for storing account credentials"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m endpoint_type   = "public"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id              = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m name            = "iam-svcid-apikey-sm-i9a-account-secret-group"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m region          = "us-south"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_group_id = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m updated_at      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m created_at      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m description     = "service secret group"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m endpoint_type   = "public"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id              = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m name            = "iam-svcid-apikey-sm-upg-buf-svc-secret-group"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m region          = "us-south"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_group_id = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m updated_at      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [1mPlan:[0m 5 to add, 0 to change, 0 to destroy.
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67: Changes to Outputs:
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m[0m secrets_manager_crn                   = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::"
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m[0m service_secret_group_id               = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [1m  # module.secrets_manager_group_service.ibm_sm_secret_group.secret_group[0m will be created
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m  [32m+[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m[0m sm_iam_secret_next_rotation_date      = (known after apply)
+TestRunUpgradeExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m[0m sm_iam_secret_puller_apikey_secret_id = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m created_at      = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m description     = "service secret group"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m endpoint_type   = "public"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m id              = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m name            = "iam-svcid-apikey-sm-i9a-svc-secret-group"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m region          = "us-south"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m secret_group_id = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:       [32m+[0m[0m updated_at      = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:     }
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: 
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [1mPlan:[0m 5 to add, 0 to change, 0 to destroy.
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: [0m
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67: Changes to Outputs:
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m[0m secrets_manager_crn                   = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::"
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m[0m service_secret_group_id               = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m[0m sm_iam_secret_next_rotation_date      = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:46+05:30 logger.go:67:   [32m+[0m[0m sm_iam_secret_puller_apikey_secret_id = (known after apply)
+TestRunDefaultExample 2025-11-24T09:28:47+05:30 logger.go:67: [0m[1mibm_iam_service_id.secret_puller: Creating...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:47+05:30 logger.go:67: [0m[1mibm_iam_service_id.secret_puller: Creating...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:47+05:30 logger.go:67: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Creating...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:47+05:30 logger.go:67: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Creating...[0m[0m
+TestRunDefaultExample 2025-11-24T09:28:47+05:30 logger.go:67: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Creating...[0m[0m
+TestRunDefaultExample 2025-11-24T09:28:47+05:30 logger.go:67: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Creating...[0m[0m
+TestRunDefaultExample 2025-11-24T09:28:48+05:30 logger.go:67: [0m[1mibm_iam_service_id.secret_puller: Creation complete after 2s [id=ServiceId-27313b35-471c-44bb-b733-62b69052e0e8][0m
+TestRunUpgradeExample 2025-11-24T09:28:48+05:30 logger.go:67: [0m[1mibm_iam_service_id.secret_puller: Creation complete after 2s [id=ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83][0m
+TestRunDefaultExample 2025-11-24T09:28:49+05:30 logger.go:67: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Creation complete after 2s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8457af83-e506-1216-7e5f-7cfa47cc7e94][0m
+TestRunDefaultExample 2025-11-24T09:28:49+05:30 logger.go:67: [0m[1mibm_iam_service_policy.secret_puller_policy: Creating...[0m[0m
+TestRunDefaultExample 2025-11-24T09:28:49+05:30 logger.go:67: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Creation complete after 3s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/508ef20c-3126-8972-3e90-7bbaa32c18ed][0m
+TestRunUpgradeExample 2025-11-24T09:28:49+05:30 logger.go:67: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Creation complete after 3s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/154bd6dd-907f-606f-f7bd-8f4fe7827e3f][0m
+TestRunDefaultExample 2025-11-24T09:28:49+05:30 logger.go:67: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Creating...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:49+05:30 logger.go:67: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Creating...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:50+05:30 logger.go:67: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Creation complete after 3s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857][0m
+TestRunUpgradeExample 2025-11-24T09:28:50+05:30 logger.go:67: [0m[1mibm_iam_service_policy.secret_puller_policy: Creating...[0m[0m
+TestRunDefaultExample 2025-11-24T09:28:52+05:30 logger.go:67: [0m[1mibm_iam_service_policy.secret_puller_policy: Creation complete after 3s [id=iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8/3d8ec0a1-0a7c-408a-bd58-0ece5499fe25][0m
+TestRunUpgradeExample 2025-11-24T09:28:53+05:30 logger.go:67: [0m[1mibm_iam_service_policy.secret_puller_policy: Creation complete after 3s [id=iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83/a463f7c7-9f77-4ba7-9f45-a31a931f8bab][0m
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Creation complete after 5s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/e2e746e2-f806-3947-2f3c-813254ad2d0b][0m
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: [0m[1m[32m
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: [0m[0m[1m[32m
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: Outputs:
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: 
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: [0msecrets_manager_crn = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::"
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: service_secret_group_id = "508ef20c-3126-8972-3e90-7bbaa32c18ed"
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: sm_iam_secret_next_rotation_date = "2026-01-23T03:58:53Z"
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 logger.go:67: sm_iam_secret_puller_apikey_secret_id = "e2e746e2-f806-3947-2f3c-813254ad2d0b"
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 tests.go:678: FINISHED: Init / Apply
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 retry.go:91: terraform [output -no-color -json]
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 tests.go:632: START: Init / Plan / Show w/Struct
+TestRunDefaultExample 2025-11-24T09:28:54+05:30 retry.go:91: terraform [init -upgrade=true]
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Creation complete after 5s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/4a539cc1-f485-0948-ff14-a230fde4a409][0m
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m╷[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m│[0m [0m
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m│[0m [0m[0m  with ibm_iam_service_policy.secret_puller_policy,
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m│[0m [0m  on main.tf line 75, in resource "ibm_iam_service_policy" "secret_puller_policy":
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m│[0m [0m  75:   iam_service_id = [4mibm_iam_service_id.secret_puller.id[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m│[0m [0m
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m│[0m [0mThis field is deprecated and will be removed starting with this 1.82.0
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m│[0m [0mrelease. Please use iam_id field instead.
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [33m╵[0m[0m
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [0m[1m[32m
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [0m[0m[1m[32m
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: Outputs:
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: 
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: [0msecrets_manager_crn = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::"
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: service_secret_group_id = "154bd6dd-907f-606f-f7bd-8f4fe7827e3f"
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: sm_iam_secret_next_rotation_date = "2026-01-23T03:58:54Z"
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 logger.go:67: sm_iam_secret_puller_apikey_secret_id = "4a539cc1-f485-0948-ff14-a230fde4a409"
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 retry.go:91: terraform [output -no-color -json]
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 tests.go:535: State file copied to PR branch dir: /var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-pr-iam-svcid-apikey-sm-upg-buf367338164/examples/complete-rotation-policy/terraform.tfstate
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 tests.go:538: Init / Plan on PR Branch: 16377-issue
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 tests.go:539: Init / Plan on PR Branch dir: /var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-pr-iam-svcid-apikey-sm-upg-buf367338164/examples/complete-rotation-policy
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 tests.go:632: START: Init / Plan / Show w/Struct
+TestRunUpgradeExample 2025-11-24T09:28:55+05:30 retry.go:91: terraform [init -upgrade=true]
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] ... still waiting for job TAR_WORKSPACE_UPLOAD to complete: 1 minutes
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] The status of job TAR_WORKSPACE_UPLOAD is: COMPLETED
+    tests.go:146: [SCHEMATICS] Updating Workspace Variablestore
+    schematics.go:284: [SCHEMATICS] Updated variables for workspace: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] Created plan job: 0ce0e3bbf61557e8ae75528d5d38ffec for workspace: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6
+    tests.go:162: [SCHEMATICS] Starting PLAN job ...
+TestRunDefaultExample 2025-11-24T09:29:22+05:30 retry.go:91: terraform [plan -input=false -lock=false -var resource_tags=["iam-svcid-apikey-sm"] -var skip_iam_authorization_policy=true -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var prefix=iam-svcid-apikey-sm-i9a -var region=br-sao -var resource_group=geretain-test-secrets-manager -lock=false -out=/var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-iam-svcid-apikey-sm-i9a415712366/examples/complete-rotation-policy/terratest-plan-file-2907316262]
+TestRunDefaultExample 2025-11-24T09:29:27+05:30 retry.go:91: terraform [show -no-color -json /var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-iam-svcid-apikey-sm-i9a415712366/examples/complete-rotation-policy/terratest-plan-file-2907316262]
+TestRunDefaultExample 2025-11-24T09:29:28+05:30 tests.go:650: FINISHED: Init / Plan / Show w/Struct
+TestRunDefaultExample 2025-11-24T09:29:28+05:30 retry.go:91: terraform [plan -input=false -lock=false -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var prefix=iam-svcid-apikey-sm-i9a -var region=br-sao -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm"] -var skip_iam_authorization_policy=true -lock=false -out=/var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-iam-svcid-apikey-sm-i9a415712366/examples/complete-rotation-policy/terratest-plan-file-2907316262]
+TestRunDefaultExample 2025-11-24T09:29:28+05:30 command.go:123: Running command terraform with args [plan -input=false -lock=false -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var prefix=iam-svcid-apikey-sm-i9a -var region=br-sao -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm"] -var skip_iam_authorization_policy=true -lock=false -out=/var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-iam-svcid-apikey-sm-i9a415712366/examples/complete-rotation-policy/terratest-plan-file-2907316262]
+TestRunDefaultExample 2025-11-24T09:29:29+05:30 command.go:212: [0m[1mibm_iam_service_id.secret_puller: Refreshing state... [id=ServiceId-27313b35-471c-44bb-b733-62b69052e0e8][0m
+TestRunDefaultExample 2025-11-24T09:29:29+05:30 command.go:212: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Reading...[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:29+05:30 command.go:212: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Reading...[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:30+05:30 command.go:212: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Read complete after 1s [id=e11a55e356cc42f78822b1aa5d3a41a5][0m
+TestRunDefaultExample 2025-11-24T09:29:30+05:30 command.go:212: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Reading...[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:30+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/508ef20c-3126-8972-3e90-7bbaa32c18ed][0m
+TestRunDefaultExample 2025-11-24T09:29:30+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8457af83-e506-1216-7e5f-7cfa47cc7e94][0m
+TestRunDefaultExample 2025-11-24T09:29:31+05:30 command.go:212: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Read complete after 0s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667][0m
+TestRunDefaultExample 2025-11-24T09:29:31+05:30 command.go:212: [0m[1mibm_iam_service_policy.secret_puller_policy: Refreshing state... [id=iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8/3d8ec0a1-0a7c-408a-bd58-0ece5499fe25][0m
+TestRunDefaultExample 2025-11-24T09:29:31+05:30 command.go:212: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/e2e746e2-f806-3947-2f3c-813254ad2d0b][0m
+TestRunDefaultExample 2025-11-24T09:29:32+05:30 command.go:212: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Read complete after 2s [id=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::][0m
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 command.go:212: [0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 command.go:212: [0mTerraform has compared your real infrastructure against your configuration
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 command.go:212: and found no differences, so no changes are needed.
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 tests.go:613: FINISHED: Init / Apply / Consistency Check
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 retry.go:91: terraform [output -no-color -json]
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 tests.go:203: START: Destroy
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 retry.go:91: terraform [destroy -auto-approve -input=false -var prefix=iam-svcid-apikey-sm-i9a -var region=br-sao -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm"] -var skip_iam_authorization_policy=true -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -lock=false]
+TestRunDefaultExample 2025-11-24T09:29:33+05:30 command.go:123: Running command terraform with args [destroy -auto-approve -input=false -var prefix=iam-svcid-apikey-sm-i9a -var region=br-sao -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm"] -var skip_iam_authorization_policy=true -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -lock=false]
+TestRunUpgradeExample 2025-11-24T09:29:33+05:30 retry.go:91: terraform [plan -input=false -lock=false -var region=br-sao -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm-upg"] -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var skip_iam_authorization_policy=true -var prefix=iam-svcid-apikey-sm-upg-buf -lock=false -out=/var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-pr-iam-svcid-apikey-sm-upg-buf367338164/examples/complete-rotation-policy/terratest-plan-file-2459846851]
+TestRunDefaultExample 2025-11-24T09:29:34+05:30 command.go:212: [0m[1mibm_iam_service_id.secret_puller: Refreshing state... [id=ServiceId-27313b35-471c-44bb-b733-62b69052e0e8][0m
+TestRunDefaultExample 2025-11-24T09:29:34+05:30 command.go:212: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Reading...[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:34+05:30 command.go:212: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Reading...[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:35+05:30 command.go:212: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Read complete after 1s [id=e11a55e356cc42f78822b1aa5d3a41a5][0m
+TestRunDefaultExample 2025-11-24T09:29:35+05:30 command.go:212: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Reading...[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:35+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/508ef20c-3126-8972-3e90-7bbaa32c18ed][0m
+TestRunDefaultExample 2025-11-24T09:29:35+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8457af83-e506-1216-7e5f-7cfa47cc7e94][0m
+TestRunDefaultExample 2025-11-24T09:29:35+05:30 command.go:212: [0m[1mibm_iam_service_policy.secret_puller_policy: Refreshing state... [id=iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8/3d8ec0a1-0a7c-408a-bd58-0ece5499fe25][0m
+TestRunDefaultExample 2025-11-24T09:29:35+05:30 command.go:212: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/e2e746e2-f806-3947-2f3c-813254ad2d0b][0m
+TestRunDefaultExample 2025-11-24T09:29:35+05:30 command.go:212: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Read complete after 0s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667][0m
+TestRunDefaultExample 2025-11-24T09:29:35+05:30 command.go:212: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Read complete after 2s [id=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::][0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: Terraform used the selected providers to generate the following execution
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: plan. Resource actions are indicated with the following symbols:
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:   [31m-[0m destroy[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: Terraform will perform the following actions:
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [1m  # ibm_iam_service_id.secret_puller[0m will be [1m[31mdestroyed[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_iam_service_id" "secret_puller" {
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m crn         = "crn:v1:bluemix:public:iam-identity::a/abac0df06b644a9cabc6e44f55b3880e::serviceid:ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m description = "ServiceID that can pull secrets from Secret Manager" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m iam_id      = "iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m id          = "ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m locked      = false [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m name        = "sid:0.0.1:iam-svcid-apikey-sm-i9a-secret-puller:automated:simple-service:secret-manager:" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m version     = "1-a7facf9a2c24d96b2042324877e81414" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:     }
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [1m  # ibm_iam_service_policy.secret_puller_policy[0m will be [1m[31mdestroyed[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_iam_service_policy" "secret_puller_policy" {
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m account_management = false [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m iam_id             = "iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m iam_service_id     = "ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m id                 = "iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8/3d8ec0a1-0a7c-408a-bd58-0ece5499fe25" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m roles              = [
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m "Viewer",
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m "SecretsReader",
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:         ] [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m transaction_id     = "a086ed8b0f6947eca27c46f65e7f347d" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m resources {
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m attributes           = {} [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m resource             = "8457af83-e506-1216-7e5f-7cfa47cc7e94" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m resource_instance_id = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m resource_type        = "secret-group" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m service              = "secrets-manager" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:             [90m# (4 unchanged attributes hidden)[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:         }
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:     }
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [1m  # module.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret[0m will be [1m[31mdestroyed[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_sm_iam_credentials_secret" "sm_iam_credentials_secret" {
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m api_key                 = (sensitive value) [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m api_key_id              = "ApiKey-d9a58149-23ae-4b09-9b4d-4aa42095ab48" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m created_at              = "2025-11-24T03:58:52Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m created_by              = "IBMid-693000KKB0" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m crn                     = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:secret:e2e746e2-f806-3947-2f3c-813254ad2d0b" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m custom_metadata         = {} [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m description             = "Example of dynamic IAM secret / apikey" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m downloaded              = true [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m endpoint_type           = "public" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m expiration_date         = "2026-02-22T03:58:53Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m id                      = "us-south/79c6d411-c18f-4670-b009-b0044a238667/e2e746e2-f806-3947-2f3c-813254ad2d0b" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m instance_id             = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m labels                  = [
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m "iam-svcid-apikey-sm",
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:         ] [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m locks_total             = 0 [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m name                    = "iam-svcid-apikey-sm-i9a-sm-iam-secret-puller" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m next_rotation_date      = "2026-01-23T03:58:53Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m region                  = "us-south" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m retrieved_at            = "2025-11-24T03:59:35Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m reuse_api_key           = true [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m secret_group_id         = "508ef20c-3126-8972-3e90-7bbaa32c18ed" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m secret_id               = "e2e746e2-f806-3947-2f3c-813254ad2d0b" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m secret_type             = "iam_credentials" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m service_id              = "ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m service_id_is_static    = true [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m state                   = 1 [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m state_description       = "active" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m ttl                     = "7776000" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m updated_at              = "2025-11-24T03:58:54Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m version_custom_metadata = {} [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m versions_total          = 2 [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m rotation {
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m auto_rotate = true [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m interval    = 60 [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:           [31m-[0m[0m unit        = "day" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:         }
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:     }
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [1m  # module.secrets_manager_group_acct.ibm_sm_secret_group.secret_group[0m will be [1m[31mdestroyed[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m created_at      = "2025-11-24T03:58:48Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m description     = "Secret-Group for storing account credentials" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m endpoint_type   = "public" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m id              = "us-south/79c6d411-c18f-4670-b009-b0044a238667/8457af83-e506-1216-7e5f-7cfa47cc7e94" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m name            = "iam-svcid-apikey-sm-i9a-account-secret-group" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m region          = "us-south" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m secret_group_id = "8457af83-e506-1216-7e5f-7cfa47cc7e94" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m updated_at      = "2025-11-24T03:58:48Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:     }
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [1m  # module.secrets_manager_group_service.ibm_sm_secret_group.secret_group[0m will be [1m[31mdestroyed[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m created_at      = "2025-11-24T03:58:48Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m description     = "service secret group" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m endpoint_type   = "public" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m id              = "us-south/79c6d411-c18f-4670-b009-b0044a238667/508ef20c-3126-8972-3e90-7bbaa32c18ed" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m name            = "iam-svcid-apikey-sm-i9a-svc-secret-group" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m region          = "us-south" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m secret_group_id = "508ef20c-3126-8972-3e90-7bbaa32c18ed" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:       [31m-[0m[0m updated_at      = "2025-11-24T03:58:48Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:     }
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: 
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [1mPlan:[0m 0 to add, 0 to change, 5 to destroy.
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: Changes to Outputs:
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:   [31m-[0m[0m secrets_manager_crn                   = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:   [31m-[0m[0m service_secret_group_id               = "508ef20c-3126-8972-3e90-7bbaa32c18ed" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:   [31m-[0m[0m sm_iam_secret_next_rotation_date      = "2026-01-23T03:58:53Z" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212:   [31m-[0m[0m sm_iam_secret_puller_apikey_secret_id = "e2e746e2-f806-3947-2f3c-813254ad2d0b" [90m-> null[0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [0m[1mibm_iam_service_policy.secret_puller_policy: Destroying... [id=iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8/3d8ec0a1-0a7c-408a-bd58-0ece5499fe25][0m[0m
+TestRunDefaultExample 2025-11-24T09:29:37+05:30 command.go:212: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/e2e746e2-f806-3947-2f3c-813254ad2d0b][0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:38+05:30 retry.go:91: terraform [show -no-color -json /var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-pr-iam-svcid-apikey-sm-upg-buf367338164/examples/complete-rotation-policy/terratest-plan-file-2459846851]
+TestRunUpgradeExample 2025-11-24T09:29:39+05:30 tests.go:650: FINISHED: Init / Plan / Show w/Struct
+TestRunUpgradeExample 2025-11-24T09:29:39+05:30 tests.go:554: Parsing plan output to determine if any resources identified for destroy (PR branch)...
+TestRunUpgradeExample 2025-11-24T09:29:39+05:30 retry.go:91: terraform [plan -input=false -lock=false -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm-upg"] -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var skip_iam_authorization_policy=true -var prefix=iam-svcid-apikey-sm-upg-buf -var region=br-sao -lock=false -out=/var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-pr-iam-svcid-apikey-sm-upg-buf367338164/examples/complete-rotation-policy/terratest-plan-file-2459846851]
+TestRunUpgradeExample 2025-11-24T09:29:39+05:30 command.go:123: Running command terraform with args [plan -input=false -lock=false -var resource_group=geretain-test-secrets-manager -var resource_tags=["iam-svcid-apikey-sm-upg"] -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var skip_iam_authorization_policy=true -var prefix=iam-svcid-apikey-sm-upg-buf -var region=br-sao -lock=false -out=/var/folders/vh/syq93zks0k38v_dhpnypz4hm0000gn/T/terraform-pr-iam-svcid-apikey-sm-upg-buf367338164/examples/complete-rotation-policy/terratest-plan-file-2459846851]
+TestRunDefaultExample 2025-11-24T09:29:39+05:30 command.go:212: [0m[1mibm_iam_service_policy.secret_puller_policy: Destruction complete after 1s[0m
+TestRunDefaultExample 2025-11-24T09:29:39+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8457af83-e506-1216-7e5f-7cfa47cc7e94][0m[0m
+TestRunDefaultExample 2025-11-24T09:29:39+05:30 command.go:212: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Destruction complete after 2s[0m
+TestRunDefaultExample 2025-11-24T09:29:39+05:30 command.go:212: [0m[1mibm_iam_service_id.secret_puller: Destroying... [id=ServiceId-27313b35-471c-44bb-b733-62b69052e0e8][0m[0m
+TestRunDefaultExample 2025-11-24T09:29:39+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/508ef20c-3126-8972-3e90-7bbaa32c18ed][0m[0m
+TestRunDefaultExample 2025-11-24T09:29:40+05:30 command.go:212: [0m[1mibm_iam_service_id.secret_puller: Destruction complete after 0s[0m
+TestRunUpgradeExample 2025-11-24T09:29:40+05:30 command.go:212: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:40+05:30 command.go:212: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:40+05:30 command.go:212: [0m[1mibm_iam_service_id.secret_puller: Refreshing state... [id=ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83][0m
+TestRunDefaultExample 2025-11-24T09:29:41+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Destruction complete after 2s[0m
+TestRunUpgradeExample 2025-11-24T09:29:41+05:30 command.go:212: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Read complete after 0s [id=e11a55e356cc42f78822b1aa5d3a41a5][0m
+TestRunUpgradeExample 2025-11-24T09:29:41+05:30 command.go:212: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:41+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/154bd6dd-907f-606f-f7bd-8f4fe7827e3f][0m
+TestRunUpgradeExample 2025-11-24T09:29:41+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857][0m
+TestRunDefaultExample 2025-11-24T09:29:42+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Destruction complete after 2s[0m
+TestRunUpgradeExample 2025-11-24T09:29:42+05:30 command.go:212: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Read complete after 1s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667][0m
+TestRunDefaultExample 2025-11-24T09:29:42+05:30 command.go:212: [0m[1m[32m
+TestRunDefaultExample 2025-11-24T09:29:42+05:30 command.go:212: Destroy complete! Resources: 5 destroyed.
+TestRunDefaultExample 2025-11-24T09:29:42+05:30 command.go:212: [0m
+TestRunDefaultExample 2025-11-24T09:29:42+05:30 tests.go:275: [0m[1mibm_iam_service_id.secret_puller: Refreshing state... [id=ServiceId-27313b35-471c-44bb-b733-62b69052e0e8][0m
+[0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Reading...[0m[0m
+[0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Reading...[0m[0m
+[0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Read complete after 1s [id=e11a55e356cc42f78822b1aa5d3a41a5][0m
+[0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Reading...[0m[0m
+[0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/508ef20c-3126-8972-3e90-7bbaa32c18ed][0m
+[0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8457af83-e506-1216-7e5f-7cfa47cc7e94][0m
+[0m[1mibm_iam_service_policy.secret_puller_policy: Refreshing state... [id=iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8/3d8ec0a1-0a7c-408a-bd58-0ece5499fe25][0m
+[0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/e2e746e2-f806-3947-2f3c-813254ad2d0b][0m
+[0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Read complete after 0s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667][0m
+[0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Read complete after 2s [id=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # ibm_iam_service_id.secret_puller[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_iam_service_id" "secret_puller" {
+      [31m-[0m[0m crn         = "crn:v1:bluemix:public:iam-identity::a/abac0df06b644a9cabc6e44f55b3880e::serviceid:ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+      [31m-[0m[0m description = "ServiceID that can pull secrets from Secret Manager" [90m-> null[0m[0m
+      [31m-[0m[0m iam_id      = "iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+      [31m-[0m[0m id          = "ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+      [31m-[0m[0m locked      = false [90m-> null[0m[0m
+      [31m-[0m[0m name        = "sid:0.0.1:iam-svcid-apikey-sm-i9a-secret-puller:automated:simple-service:secret-manager:" [90m-> null[0m[0m
+      [31m-[0m[0m version     = "1-a7facf9a2c24d96b2042324877e81414" [90m-> null[0m[0m
+    }
+
+[1m  # ibm_iam_service_policy.secret_puller_policy[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_iam_service_policy" "secret_puller_policy" {
+      [31m-[0m[0m account_management = false [90m-> null[0m[0m
+      [31m-[0m[0m iam_id             = "iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+      [31m-[0m[0m iam_service_id     = "ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+      [31m-[0m[0m id                 = "iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8/3d8ec0a1-0a7c-408a-bd58-0ece5499fe25" [90m-> null[0m[0m
+      [31m-[0m[0m roles              = [
+          [31m-[0m[0m "Viewer",
+          [31m-[0m[0m "SecretsReader",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m transaction_id     = "a086ed8b0f6947eca27c46f65e7f347d" [90m-> null[0m[0m
+
+      [31m-[0m[0m resources {
+          [31m-[0m[0m attributes           = {} [90m-> null[0m[0m
+          [31m-[0m[0m resource             = "8457af83-e506-1216-7e5f-7cfa47cc7e94" [90m-> null[0m[0m
+          [31m-[0m[0m resource_instance_id = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+          [31m-[0m[0m resource_type        = "secret-group" [90m-> null[0m[0m
+          [31m-[0m[0m service              = "secrets-manager" [90m-> null[0m[0m
+            [90m# (4 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # module.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_sm_iam_credentials_secret" "sm_iam_credentials_secret" {
+      [31m-[0m[0m api_key                 = (sensitive value) [90m-> null[0m[0m
+      [31m-[0m[0m api_key_id              = "ApiKey-d9a58149-23ae-4b09-9b4d-4aa42095ab48" [90m-> null[0m[0m
+      [31m-[0m[0m created_at              = "2025-11-24T03:58:52Z" [90m-> null[0m[0m
+      [31m-[0m[0m created_by              = "IBMid-693000KKB0" [90m-> null[0m[0m
+      [31m-[0m[0m crn                     = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:secret:e2e746e2-f806-3947-2f3c-813254ad2d0b" [90m-> null[0m[0m
+      [31m-[0m[0m custom_metadata         = {} [90m-> null[0m[0m
+      [31m-[0m[0m description             = "Example of dynamic IAM secret / apikey" [90m-> null[0m[0m
+      [31m-[0m[0m downloaded              = true [90m-> null[0m[0m
+      [31m-[0m[0m endpoint_type           = "public" [90m-> null[0m[0m
+      [31m-[0m[0m expiration_date         = "2026-02-22T03:58:53Z" [90m-> null[0m[0m
+      [31m-[0m[0m id                      = "us-south/79c6d411-c18f-4670-b009-b0044a238667/e2e746e2-f806-3947-2f3c-813254ad2d0b" [90m-> null[0m[0m
+      [31m-[0m[0m instance_id             = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+      [31m-[0m[0m labels                  = [
+          [31m-[0m[0m "iam-svcid-apikey-sm",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m locks_total             = 0 [90m-> null[0m[0m
+      [31m-[0m[0m name                    = "iam-svcid-apikey-sm-i9a-sm-iam-secret-puller" [90m-> null[0m[0m
+      [31m-[0m[0m next_rotation_date      = "2026-01-23T03:58:53Z" [90m-> null[0m[0m
+      [31m-[0m[0m region                  = "us-south" [90m-> null[0m[0m
+      [31m-[0m[0m retrieved_at            = "2025-11-24T03:59:35Z" [90m-> null[0m[0m
+      [31m-[0m[0m reuse_api_key           = true [90m-> null[0m[0m
+      [31m-[0m[0m secret_group_id         = "508ef20c-3126-8972-3e90-7bbaa32c18ed" [90m-> null[0m[0m
+      [31m-[0m[0m secret_id               = "e2e746e2-f806-3947-2f3c-813254ad2d0b" [90m-> null[0m[0m
+      [31m-[0m[0m secret_type             = "iam_credentials" [90m-> null[0m[0m
+      [31m-[0m[0m service_id              = "ServiceId-27313b35-471c-44bb-b733-62b69052e0e8" [90m-> null[0m[0m
+      [31m-[0m[0m service_id_is_static    = true [90m-> null[0m[0m
+      [31m-[0m[0m state                   = 1 [90m-> null[0m[0m
+      [31m-[0m[0m state_description       = "active" [90m-> null[0m[0m
+      [31m-[0m[0m ttl                     = "7776000" [90m-> null[0m[0m
+      [31m-[0m[0m updated_at              = "2025-11-24T03:58:54Z" [90m-> null[0m[0m
+      [31m-[0m[0m version_custom_metadata = {} [90m-> null[0m[0m
+      [31m-[0m[0m versions_total          = 2 [90m-> null[0m[0m
+
+      [31m-[0m[0m rotation {
+          [31m-[0m[0m auto_rotate = true [90m-> null[0m[0m
+          [31m-[0m[0m interval    = 60 [90m-> null[0m[0m
+          [31m-[0m[0m unit        = "day" [90m-> null[0m[0m
+        }
+    }
+
+[1m  # module.secrets_manager_group_acct.ibm_sm_secret_group.secret_group[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+      [31m-[0m[0m created_at      = "2025-11-24T03:58:48Z" [90m-> null[0m[0m
+      [31m-[0m[0m description     = "Secret-Group for storing account credentials" [90m-> null[0m[0m
+      [31m-[0m[0m endpoint_type   = "public" [90m-> null[0m[0m
+      [31m-[0m[0m id              = "us-south/79c6d411-c18f-4670-b009-b0044a238667/8457af83-e506-1216-7e5f-7cfa47cc7e94" [90m-> null[0m[0m
+      [31m-[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+      [31m-[0m[0m name            = "iam-svcid-apikey-sm-i9a-account-secret-group" [90m-> null[0m[0m
+      [31m-[0m[0m region          = "us-south" [90m-> null[0m[0m
+      [31m-[0m[0m secret_group_id = "8457af83-e506-1216-7e5f-7cfa47cc7e94" [90m-> null[0m[0m
+      [31m-[0m[0m updated_at      = "2025-11-24T03:58:48Z" [90m-> null[0m[0m
+    }
+
+[1m  # module.secrets_manager_group_service.ibm_sm_secret_group.secret_group[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+      [31m-[0m[0m created_at      = "2025-11-24T03:58:48Z" [90m-> null[0m[0m
+      [31m-[0m[0m description     = "service secret group" [90m-> null[0m[0m
+      [31m-[0m[0m endpoint_type   = "public" [90m-> null[0m[0m
+      [31m-[0m[0m id              = "us-south/79c6d411-c18f-4670-b009-b0044a238667/508ef20c-3126-8972-3e90-7bbaa32c18ed" [90m-> null[0m[0m
+      [31m-[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+      [31m-[0m[0m name            = "iam-svcid-apikey-sm-i9a-svc-secret-group" [90m-> null[0m[0m
+      [31m-[0m[0m region          = "us-south" [90m-> null[0m[0m
+      [31m-[0m[0m secret_group_id = "508ef20c-3126-8972-3e90-7bbaa32c18ed" [90m-> null[0m[0m
+      [31m-[0m[0m updated_at      = "2025-11-24T03:58:48Z" [90m-> null[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 5 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m secrets_manager_crn                   = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::" [90m-> null[0m[0m
+  [31m-[0m[0m service_secret_group_id               = "508ef20c-3126-8972-3e90-7bbaa32c18ed" [90m-> null[0m[0m
+  [31m-[0m[0m sm_iam_secret_next_rotation_date      = "2026-01-23T03:58:53Z" [90m-> null[0m[0m
+  [31m-[0m[0m sm_iam_secret_puller_apikey_secret_id = "e2e746e2-f806-3947-2f3c-813254ad2d0b" [90m-> null[0m[0m
+[0m[1mibm_iam_service_policy.secret_puller_policy: Destroying... [id=iam-ServiceId-27313b35-471c-44bb-b733-62b69052e0e8/3d8ec0a1-0a7c-408a-bd58-0ece5499fe25][0m[0m
+[0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/e2e746e2-f806-3947-2f3c-813254ad2d0b][0m[0m
+[0m[1mibm_iam_service_policy.secret_puller_policy: Destruction complete after 1s[0m
+[0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8457af83-e506-1216-7e5f-7cfa47cc7e94][0m[0m
+[0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Destruction complete after 2s[0m
+[0m[1mibm_iam_service_id.secret_puller: Destroying... [id=ServiceId-27313b35-471c-44bb-b733-62b69052e0e8][0m[0m
+[0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/508ef20c-3126-8972-3e90-7bbaa32c18ed][0m[0m
+[0m[1mibm_iam_service_id.secret_puller: Destruction complete after 0s[0m
+[0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Destruction complete after 2s[0m
+[0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Destruction complete after 2s[0m
+[0m[1m[32m
+Destroy complete! Resources: 5 destroyed.
+[0m
+TestRunDefaultExample 2025-11-24T09:29:42+05:30 tests.go:280: END: Destroy
+TestRunUpgradeExample 2025-11-24T09:29:42+05:30 command.go:212: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/4a539cc1-f485-0948-ff14-a230fde4a409][0m
+TestRunUpgradeExample 2025-11-24T09:29:42+05:30 command.go:212: [0m[1mibm_iam_service_policy.secret_puller_policy: Refreshing state... [id=iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83/a463f7c7-9f77-4ba7-9f45-a31a931f8bab][0m
+--- PASS: TestRunDefaultExample (139.28s)
+TestRunUpgradeExample 2025-11-24T09:29:42+05:30 command.go:212: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Read complete after 2s [id=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::][0m
+TestRunUpgradeExample 2025-11-24T09:29:44+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:44+05:30 command.go:212: [0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m
+TestRunUpgradeExample 2025-11-24T09:29:44+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:44+05:30 command.go:212: [0mTerraform has compared your real infrastructure against your configuration
+TestRunUpgradeExample 2025-11-24T09:29:44+05:30 command.go:212: and found no differences, so no changes are needed.
+TestRunUpgradeExample 2025-11-24T09:29:44+05:30 retry.go:91: terraform [output -no-color -json]
+TestRunUpgradeExample 2025-11-24T09:29:44+05:30 tests.go:203: START: Destroy
+TestRunUpgradeExample 2025-11-24T09:29:44+05:30 retry.go:91: terraform [destroy -auto-approve -input=false -var resource_tags=["iam-svcid-apikey-sm-upg"] -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var skip_iam_authorization_policy=true -var prefix=iam-svcid-apikey-sm-upg-buf -var region=br-sao -var resource_group=geretain-test-secrets-manager -lock=false]
+TestRunUpgradeExample 2025-11-24T09:29:44+05:30 command.go:123: Running command terraform with args [destroy -auto-approve -input=false -var resource_tags=["iam-svcid-apikey-sm-upg"] -var existing_sm_instance_crn=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:: -var skip_iam_authorization_policy=true -var prefix=iam-svcid-apikey-sm-upg-buf -var region=br-sao -var resource_group=geretain-test-secrets-manager -lock=false]
+TestRunUpgradeExample 2025-11-24T09:29:45+05:30 command.go:212: [0m[1mibm_iam_service_id.secret_puller: Refreshing state... [id=ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83][0m
+TestRunUpgradeExample 2025-11-24T09:29:45+05:30 command.go:212: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:45+05:30 command.go:212: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:46+05:30 command.go:212: [0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Read complete after 1s [id=e11a55e356cc42f78822b1aa5d3a41a5][0m
+TestRunUpgradeExample 2025-11-24T09:29:46+05:30 command.go:212: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Reading...[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:46+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/154bd6dd-907f-606f-f7bd-8f4fe7827e3f][0m
+TestRunUpgradeExample 2025-11-24T09:29:46+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857][0m
+TestRunUpgradeExample 2025-11-24T09:29:47+05:30 command.go:212: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/4a539cc1-f485-0948-ff14-a230fde4a409][0m
+TestRunUpgradeExample 2025-11-24T09:29:47+05:30 command.go:212: [0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Read complete after 0s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667][0m
+TestRunUpgradeExample 2025-11-24T09:29:47+05:30 command.go:212: [0m[1mibm_iam_service_policy.secret_puller_policy: Refreshing state... [id=iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83/a463f7c7-9f77-4ba7-9f45-a31a931f8bab][0m
+TestRunUpgradeExample 2025-11-24T09:29:47+05:30 command.go:212: [0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Read complete after 2s [id=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::][0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: Terraform used the selected providers to generate the following execution
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: plan. Resource actions are indicated with the following symbols:
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:   [31m-[0m destroy[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: Terraform will perform the following actions:
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [1m  # ibm_iam_service_id.secret_puller[0m will be [1m[31mdestroyed[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_iam_service_id" "secret_puller" {
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m crn         = "crn:v1:bluemix:public:iam-identity::a/abac0df06b644a9cabc6e44f55b3880e::serviceid:ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m description = "ServiceID that can pull secrets from Secret Manager" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m iam_id      = "iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m id          = "ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m locked      = false [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m name        = "sid:0.0.1:iam-svcid-apikey-sm-upg-buf-secret-puller:automated:simple-service:secret-manager:" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m version     = "1-74729a87fc0e402406c5aa49b55db2d2" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:     }
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [1m  # ibm_iam_service_policy.secret_puller_policy[0m will be [1m[31mdestroyed[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_iam_service_policy" "secret_puller_policy" {
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m account_management = false [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m iam_id             = "iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m iam_service_id     = "ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m id                 = "iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83/a463f7c7-9f77-4ba7-9f45-a31a931f8bab" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m roles              = [
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m "Viewer",
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m "SecretsReader",
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:         ] [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m transaction_id     = "093768e0572b431aa3b5b13c7df0e434" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m resources {
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m attributes           = {} [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m resource             = "8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m resource_instance_id = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m resource_type        = "secret-group" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m service              = "secrets-manager" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:             [90m# (4 unchanged attributes hidden)[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:         }
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:     }
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [1m  # module.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret[0m will be [1m[31mdestroyed[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_sm_iam_credentials_secret" "sm_iam_credentials_secret" {
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m api_key                 = (sensitive value) [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m api_key_id              = "ApiKey-5a5eaef9-6b29-4013-a022-7afab0cc4804" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m created_at              = "2025-11-24T03:58:52Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m created_by              = "IBMid-693000KKB0" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m crn                     = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:secret:4a539cc1-f485-0948-ff14-a230fde4a409" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m custom_metadata         = {} [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m description             = "Example of dynamic IAM secret / apikey" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m downloaded              = true [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m endpoint_type           = "public" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m expiration_date         = "2026-02-22T03:58:54Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m id                      = "us-south/79c6d411-c18f-4670-b009-b0044a238667/4a539cc1-f485-0948-ff14-a230fde4a409" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m instance_id             = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m labels                  = [
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m "iam-svcid-apikey-sm-upg",
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:         ] [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m locks_total             = 0 [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m name                    = "iam-svcid-apikey-sm-upg-buf-sm-iam-secret-puller" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m next_rotation_date      = "2026-01-23T03:58:54Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m region                  = "us-south" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m retrieved_at            = "2025-11-24T03:59:47Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m reuse_api_key           = true [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m secret_group_id         = "154bd6dd-907f-606f-f7bd-8f4fe7827e3f" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m secret_id               = "4a539cc1-f485-0948-ff14-a230fde4a409" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m secret_type             = "iam_credentials" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m service_id              = "ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m service_id_is_static    = true [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m state                   = 1 [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m state_description       = "active" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m ttl                     = "7776000" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m updated_at              = "2025-11-24T03:58:54Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m version_custom_metadata = {} [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m versions_total          = 2 [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m rotation {
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m auto_rotate = true [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m interval    = 60 [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:           [31m-[0m[0m unit        = "day" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:         }
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:     }
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [1m  # module.secrets_manager_group_acct.ibm_sm_secret_group.secret_group[0m will be [1m[31mdestroyed[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m created_at      = "2025-11-24T03:58:49Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m description     = "Secret-Group for storing account credentials" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m endpoint_type   = "public" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m id              = "us-south/79c6d411-c18f-4670-b009-b0044a238667/8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m name            = "iam-svcid-apikey-sm-upg-buf-account-secret-group" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m region          = "us-south" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m secret_group_id = "8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m updated_at      = "2025-11-24T03:58:49Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:     }
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [1m  # module.secrets_manager_group_service.ibm_sm_secret_group.secret_group[0m will be [1m[31mdestroyed[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [0m  [31m-[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m created_at      = "2025-11-24T03:58:49Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m description     = "service secret group" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m endpoint_type   = "public" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m id              = "us-south/79c6d411-c18f-4670-b009-b0044a238667/154bd6dd-907f-606f-f7bd-8f4fe7827e3f" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m name            = "iam-svcid-apikey-sm-upg-buf-svc-secret-group" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m region          = "us-south" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m secret_group_id = "154bd6dd-907f-606f-f7bd-8f4fe7827e3f" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:       [31m-[0m[0m updated_at      = "2025-11-24T03:58:49Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:     }
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: 
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [1mPlan:[0m 0 to add, 0 to change, 5 to destroy.
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: [0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212: Changes to Outputs:
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:   [31m-[0m[0m secrets_manager_crn                   = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:   [31m-[0m[0m service_secret_group_id               = "154bd6dd-907f-606f-f7bd-8f4fe7827e3f" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:   [31m-[0m[0m sm_iam_secret_next_rotation_date      = "2026-01-23T03:58:54Z" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:49+05:30 command.go:212:   [31m-[0m[0m sm_iam_secret_puller_apikey_secret_id = "4a539cc1-f485-0948-ff14-a230fde4a409" [90m-> null[0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:50+05:30 command.go:212: [0m[1mibm_iam_service_policy.secret_puller_policy: Destroying... [id=iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83/a463f7c7-9f77-4ba7-9f45-a31a931f8bab][0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:50+05:30 command.go:212: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/4a539cc1-f485-0948-ff14-a230fde4a409][0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:52+05:30 command.go:212: [0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Destruction complete after 2s[0m
+TestRunUpgradeExample 2025-11-24T09:29:52+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/154bd6dd-907f-606f-f7bd-8f4fe7827e3f][0m[0m
+TestRunUpgradeExample 2025-11-24T09:29:54+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Destruction complete after 3s[0m
+TestRunUpgradeExample 2025-11-24T09:30:00+05:30 command.go:212: [0m[1mibm_iam_service_policy.secret_puller_policy: Still destroying... [id=iam-ServiceId-82f9e1fb-b5ed-4729-b45d-2...3/a463f7c7-9f77-4ba7-9f45-a31a931f8bab, 10s elapsed][0m[0m
+TestRunUpgradeExample 2025-11-24T09:30:01+05:30 command.go:212: [0m[1mibm_iam_service_policy.secret_puller_policy: Destruction complete after 12s[0m
+TestRunUpgradeExample 2025-11-24T09:30:01+05:30 command.go:212: [0m[1mibm_iam_service_id.secret_puller: Destroying... [id=ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83][0m[0m
+TestRunUpgradeExample 2025-11-24T09:30:01+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857][0m[0m
+TestRunUpgradeExample 2025-11-24T09:30:02+05:30 command.go:212: [0m[1mibm_iam_service_id.secret_puller: Destruction complete after 0s[0m
+TestRunUpgradeExample 2025-11-24T09:30:04+05:30 command.go:212: [0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Destruction complete after 2s[0m
+TestRunUpgradeExample 2025-11-24T09:30:04+05:30 command.go:212: [0m[1m[32m
+TestRunUpgradeExample 2025-11-24T09:30:04+05:30 command.go:212: Destroy complete! Resources: 5 destroyed.
+TestRunUpgradeExample 2025-11-24T09:30:04+05:30 command.go:212: [0m
+TestRunUpgradeExample 2025-11-24T09:30:04+05:30 tests.go:275: [0m[1mibm_iam_service_id.secret_puller: Refreshing state... [id=ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83][0m
+[0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Reading...[0m[0m
+[0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Reading...[0m[0m
+[0m[1mmodule.resource_group.data.ibm_resource_group.existing_resource_group[0]: Read complete after 1s [id=e11a55e356cc42f78822b1aa5d3a41a5][0m
+[0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Reading...[0m[0m
+[0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/154bd6dd-907f-606f-f7bd-8f4fe7827e3f][0m
+[0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857][0m
+[0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Refreshing state... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/4a539cc1-f485-0948-ff14-a230fde4a409][0m
+[0m[1mmodule.secrets_manager.module.secrets.data.ibm_sm_secret_groups.existing_secret_groups: Read complete after 0s [id=us-south/79c6d411-c18f-4670-b009-b0044a238667][0m
+[0m[1mibm_iam_service_policy.secret_puller_policy: Refreshing state... [id=iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83/a463f7c7-9f77-4ba7-9f45-a31a931f8bab][0m
+[0m[1mmodule.secrets_manager.data.ibm_resource_instance.sm_instance[0]: Read complete after 2s [id=crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # ibm_iam_service_id.secret_puller[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_iam_service_id" "secret_puller" {
+      [31m-[0m[0m crn         = "crn:v1:bluemix:public:iam-identity::a/abac0df06b644a9cabc6e44f55b3880e::serviceid:ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+      [31m-[0m[0m description = "ServiceID that can pull secrets from Secret Manager" [90m-> null[0m[0m
+      [31m-[0m[0m iam_id      = "iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+      [31m-[0m[0m id          = "ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+      [31m-[0m[0m locked      = false [90m-> null[0m[0m
+      [31m-[0m[0m name        = "sid:0.0.1:iam-svcid-apikey-sm-upg-buf-secret-puller:automated:simple-service:secret-manager:" [90m-> null[0m[0m
+      [31m-[0m[0m version     = "1-74729a87fc0e402406c5aa49b55db2d2" [90m-> null[0m[0m
+    }
+
+[1m  # ibm_iam_service_policy.secret_puller_policy[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_iam_service_policy" "secret_puller_policy" {
+      [31m-[0m[0m account_management = false [90m-> null[0m[0m
+      [31m-[0m[0m iam_id             = "iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+      [31m-[0m[0m iam_service_id     = "ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+      [31m-[0m[0m id                 = "iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83/a463f7c7-9f77-4ba7-9f45-a31a931f8bab" [90m-> null[0m[0m
+      [31m-[0m[0m roles              = [
+          [31m-[0m[0m "Viewer",
+          [31m-[0m[0m "SecretsReader",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m transaction_id     = "093768e0572b431aa3b5b13c7df0e434" [90m-> null[0m[0m
+
+      [31m-[0m[0m resources {
+          [31m-[0m[0m attributes           = {} [90m-> null[0m[0m
+          [31m-[0m[0m resource             = "8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857" [90m-> null[0m[0m
+          [31m-[0m[0m resource_instance_id = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+          [31m-[0m[0m resource_type        = "secret-group" [90m-> null[0m[0m
+          [31m-[0m[0m service              = "secrets-manager" [90m-> null[0m[0m
+            [90m# (4 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # module.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_sm_iam_credentials_secret" "sm_iam_credentials_secret" {
+      [31m-[0m[0m api_key                 = (sensitive value) [90m-> null[0m[0m
+      [31m-[0m[0m api_key_id              = "ApiKey-5a5eaef9-6b29-4013-a022-7afab0cc4804" [90m-> null[0m[0m
+      [31m-[0m[0m created_at              = "2025-11-24T03:58:52Z" [90m-> null[0m[0m
+      [31m-[0m[0m created_by              = "IBMid-693000KKB0" [90m-> null[0m[0m
+      [31m-[0m[0m crn                     = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667:secret:4a539cc1-f485-0948-ff14-a230fde4a409" [90m-> null[0m[0m
+      [31m-[0m[0m custom_metadata         = {} [90m-> null[0m[0m
+      [31m-[0m[0m description             = "Example of dynamic IAM secret / apikey" [90m-> null[0m[0m
+      [31m-[0m[0m downloaded              = true [90m-> null[0m[0m
+      [31m-[0m[0m endpoint_type           = "public" [90m-> null[0m[0m
+      [31m-[0m[0m expiration_date         = "2026-02-22T03:58:54Z" [90m-> null[0m[0m
+      [31m-[0m[0m id                      = "us-south/79c6d411-c18f-4670-b009-b0044a238667/4a539cc1-f485-0948-ff14-a230fde4a409" [90m-> null[0m[0m
+      [31m-[0m[0m instance_id             = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+      [31m-[0m[0m labels                  = [
+          [31m-[0m[0m "iam-svcid-apikey-sm-upg",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m locks_total             = 0 [90m-> null[0m[0m
+      [31m-[0m[0m name                    = "iam-svcid-apikey-sm-upg-buf-sm-iam-secret-puller" [90m-> null[0m[0m
+      [31m-[0m[0m next_rotation_date      = "2026-01-23T03:58:54Z" [90m-> null[0m[0m
+      [31m-[0m[0m region                  = "us-south" [90m-> null[0m[0m
+      [31m-[0m[0m retrieved_at            = "2025-11-24T03:59:47Z" [90m-> null[0m[0m
+      [31m-[0m[0m reuse_api_key           = true [90m-> null[0m[0m
+      [31m-[0m[0m secret_group_id         = "154bd6dd-907f-606f-f7bd-8f4fe7827e3f" [90m-> null[0m[0m
+      [31m-[0m[0m secret_id               = "4a539cc1-f485-0948-ff14-a230fde4a409" [90m-> null[0m[0m
+      [31m-[0m[0m secret_type             = "iam_credentials" [90m-> null[0m[0m
+      [31m-[0m[0m service_id              = "ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83" [90m-> null[0m[0m
+      [31m-[0m[0m service_id_is_static    = true [90m-> null[0m[0m
+      [31m-[0m[0m state                   = 1 [90m-> null[0m[0m
+      [31m-[0m[0m state_description       = "active" [90m-> null[0m[0m
+      [31m-[0m[0m ttl                     = "7776000" [90m-> null[0m[0m
+      [31m-[0m[0m updated_at              = "2025-11-24T03:58:54Z" [90m-> null[0m[0m
+      [31m-[0m[0m version_custom_metadata = {} [90m-> null[0m[0m
+      [31m-[0m[0m versions_total          = 2 [90m-> null[0m[0m
+
+      [31m-[0m[0m rotation {
+          [31m-[0m[0m auto_rotate = true [90m-> null[0m[0m
+          [31m-[0m[0m interval    = 60 [90m-> null[0m[0m
+          [31m-[0m[0m unit        = "day" [90m-> null[0m[0m
+        }
+    }
+
+[1m  # module.secrets_manager_group_acct.ibm_sm_secret_group.secret_group[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+      [31m-[0m[0m created_at      = "2025-11-24T03:58:49Z" [90m-> null[0m[0m
+      [31m-[0m[0m description     = "Secret-Group for storing account credentials" [90m-> null[0m[0m
+      [31m-[0m[0m endpoint_type   = "public" [90m-> null[0m[0m
+      [31m-[0m[0m id              = "us-south/79c6d411-c18f-4670-b009-b0044a238667/8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857" [90m-> null[0m[0m
+      [31m-[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+      [31m-[0m[0m name            = "iam-svcid-apikey-sm-upg-buf-account-secret-group" [90m-> null[0m[0m
+      [31m-[0m[0m region          = "us-south" [90m-> null[0m[0m
+      [31m-[0m[0m secret_group_id = "8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857" [90m-> null[0m[0m
+      [31m-[0m[0m updated_at      = "2025-11-24T03:58:49Z" [90m-> null[0m[0m
+    }
+
+[1m  # module.secrets_manager_group_service.ibm_sm_secret_group.secret_group[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "ibm_sm_secret_group" "secret_group" {
+      [31m-[0m[0m created_at      = "2025-11-24T03:58:49Z" [90m-> null[0m[0m
+      [31m-[0m[0m description     = "service secret group" [90m-> null[0m[0m
+      [31m-[0m[0m endpoint_type   = "public" [90m-> null[0m[0m
+      [31m-[0m[0m id              = "us-south/79c6d411-c18f-4670-b009-b0044a238667/154bd6dd-907f-606f-f7bd-8f4fe7827e3f" [90m-> null[0m[0m
+      [31m-[0m[0m instance_id     = "79c6d411-c18f-4670-b009-b0044a238667" [90m-> null[0m[0m
+      [31m-[0m[0m name            = "iam-svcid-apikey-sm-upg-buf-svc-secret-group" [90m-> null[0m[0m
+      [31m-[0m[0m region          = "us-south" [90m-> null[0m[0m
+      [31m-[0m[0m secret_group_id = "154bd6dd-907f-606f-f7bd-8f4fe7827e3f" [90m-> null[0m[0m
+      [31m-[0m[0m updated_at      = "2025-11-24T03:58:49Z" [90m-> null[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 5 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m secrets_manager_crn                   = "crn:v1:bluemix:public:secrets-manager:us-south:a/abac0df06b644a9cabc6e44f55b3880e:79c6d411-c18f-4670-b009-b0044a238667::" [90m-> null[0m[0m
+  [31m-[0m[0m service_secret_group_id               = "154bd6dd-907f-606f-f7bd-8f4fe7827e3f" [90m-> null[0m[0m
+  [31m-[0m[0m sm_iam_secret_next_rotation_date      = "2026-01-23T03:58:54Z" [90m-> null[0m[0m
+  [31m-[0m[0m sm_iam_secret_puller_apikey_secret_id = "4a539cc1-f485-0948-ff14-a230fde4a409" [90m-> null[0m[0m
+[0m[1mibm_iam_service_policy.secret_puller_policy: Destroying... [id=iam-ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83/a463f7c7-9f77-4ba7-9f45-a31a931f8bab][0m[0m
+[0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/4a539cc1-f485-0948-ff14-a230fde4a409][0m[0m
+[0m[1mmodule.dynamic_serviceid_apikey1.ibm_sm_iam_credentials_secret.sm_iam_credentials_secret: Destruction complete after 2s[0m
+[0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/154bd6dd-907f-606f-f7bd-8f4fe7827e3f][0m[0m
+[0m[1mmodule.secrets_manager_group_service.ibm_sm_secret_group.secret_group: Destruction complete after 3s[0m
+[0m[1mibm_iam_service_policy.secret_puller_policy: Still destroying... [id=iam-ServiceId-82f9e1fb-b5ed-4729-b45d-2...3/a463f7c7-9f77-4ba7-9f45-a31a931f8bab, 10s elapsed][0m[0m
+[0m[1mibm_iam_service_policy.secret_puller_policy: Destruction complete after 12s[0m
+[0m[1mibm_iam_service_id.secret_puller: Destroying... [id=ServiceId-82f9e1fb-b5ed-4729-b45d-264baad29a83][0m[0m
+[0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Destroying... [id=us-south/79c6d411-c18f-4670-b009-b0044a238667/8c78641c-f8b5-fd0e-d9bb-e7f1ae2b9857][0m[0m
+[0m[1mibm_iam_service_id.secret_puller: Destruction complete after 0s[0m
+[0m[1mmodule.secrets_manager_group_acct.ibm_sm_secret_group.secret_group: Destruction complete after 2s[0m
+[0m[1m[32m
+Destroy complete! Resources: 5 destroyed.
+[0m
+TestRunUpgradeExample 2025-11-24T09:30:04+05:30 tests.go:280: END: Destroy
+TestRunUpgradeExample 2025-11-24T09:30:04+05:30 tests.go:398: Restoring UseTerraformWorkspace and WorkspacePath to original values: false 
+--- PASS: TestRunUpgradeExample (161.44s)
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] ... still waiting for job PLAN to complete: 1 minutes
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] ... still waiting for job PLAN to complete: 2 minutes
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] The status of job PLAN is: COMPLETED
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] Created apply job: 31cec9e3098df2267159624c845f9079 for workspace: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6
+=== NAME  TestPrivateInSchematics
+    tests.go:196: [SCHEMATICS] Starting APPLY job ...
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] ... still waiting for job APPLY to complete: 1 minutes
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] ... still waiting for job APPLY to complete: 2 minutes
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] The status of job APPLY is: COMPLETED
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] Retrieved 3 outputs from workspace: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] Created plan job: 95c3a07b7b0e11d8499a648ecb6ffe0f for workspace: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6
+    tests.go:262: [SCHEMATICS] Starting CONSISTENCY PLAN job ...
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] ... still waiting for job PLAN to complete: 1 minutes
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] ... still waiting for job PLAN to complete: 2 minutes
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] The status of job PLAN is: COMPLETED
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] Retrieved 3 outputs from workspace: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] Created destroy job: f2e995463db8dd3d881f719ac0a047f2 for workspace: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6
+    tests.go:455: [SCHEMATICS] Starting DESTROY job ...
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] ... still waiting for job DESTROY to complete: 1 minutes
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] ... still waiting for job DESTROY to complete: 2 minutes
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] The status of job DESTROY is: COMPLETED
+    tests.go:482: [SCHEMATICS] Deleting Workspace
+[32mINFO[0m: [32m[CloudInfoService][0m logger.go:937 [SCHEMATICS] Deleted workspace: eu-de.workspace.iam-svcid-apikey-sm-priv-3c9.397bd5f6
+--- PASS: TestPrivateInSchematics (601.44s)
+PASS
+ok  	github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager	602.788s
