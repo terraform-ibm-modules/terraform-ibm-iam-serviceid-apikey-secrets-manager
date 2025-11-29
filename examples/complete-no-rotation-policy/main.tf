@@ -42,7 +42,7 @@ module "secrets_manager" {
 # Additional Secrets-Manager Secret-Group for SERVICE level secrets
 module "secrets_manager_group_acct" {
   source               = "terraform-ibm-modules/secrets-manager-secret-group/ibm"
-  version              = "1.3.18"
+  version              = "1.3.19"
   region               = local.sm_region
   secrets_manager_guid = module.secrets_manager.secrets_manager_guid
   #tfsec:ignore:general-secrets-no-plaintext-exposure
@@ -53,7 +53,7 @@ module "secrets_manager_group_acct" {
 
 module "secrets_manager_group_service" {
   source               = "terraform-ibm-modules/secrets-manager-secret-group/ibm"
-  version              = "1.3.18"
+  version              = "1.3.19"
   region               = local.sm_region
   secrets_manager_guid = module.secrets_manager.secrets_manager_guid
   #tfsec:ignore:general-secrets-no-plaintext-exposure
