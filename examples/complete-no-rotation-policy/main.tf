@@ -13,7 +13,7 @@ locals {
 
 module "resource_group" {
   source  = "terraform-ibm-modules/resource-group/ibm"
-  version = "1.4.4"
+  version = "1.4.6"
   # if an existing resource group is not set (null) create a new one using prefix
   resource_group_name          = var.resource_group == null ? "${var.prefix}-rg" : null
   existing_resource_group_name = var.resource_group
@@ -27,7 +27,7 @@ module "resource_group" {
 
 module "secrets_manager" {
   source                        = "terraform-ibm-modules/secrets-manager/ibm"
-  version                       = "2.12.3"
+  version                       = "2.12.5"
   existing_sm_instance_crn      = var.existing_sm_instance_crn
   skip_iam_authorization_policy = var.skip_iam_authorization_policy
   resource_group_id             = module.resource_group.resource_group_id
@@ -42,7 +42,7 @@ module "secrets_manager" {
 # Additional Secrets-Manager Secret-Group for SERVICE level secrets
 module "secrets_manager_group_acct" {
   source               = "terraform-ibm-modules/secrets-manager-secret-group/ibm"
-  version              = "1.3.25"
+  version              = "1.3.28"
   region               = local.sm_region
   secrets_manager_guid = module.secrets_manager.secrets_manager_guid
   #tfsec:ignore:general-secrets-no-plaintext-exposure
@@ -53,7 +53,7 @@ module "secrets_manager_group_acct" {
 
 module "secrets_manager_group_service" {
   source               = "terraform-ibm-modules/secrets-manager-secret-group/ibm"
-  version              = "1.3.25"
+  version              = "1.3.28"
   region               = local.sm_region
   secrets_manager_guid = module.secrets_manager.secrets_manager_guid
   #tfsec:ignore:general-secrets-no-plaintext-exposure
