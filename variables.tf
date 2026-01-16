@@ -42,8 +42,22 @@ variable "sm_iam_secret_api_key_persistence" {
 
 variable "labels" {
   type        = list(string)
-  description = "Optional list of up to 30 labels to be created on the secret. Labels can be used to search for secrets in the Secrets Manager instance."
+  description = "Labels that can be used to search for secrets within the instance. Up to 30 labels can be created. Labels can be between 2 and 64 characters."
   default     = []
+
+  validation {
+    condition     = length(var.labels == null ? [] : var.labels) <= 30
+    error_message = "Up to 30 labels can be created."
+  }
+
+  validation {
+    condition = alltrue(
+      var.labels == null ?
+      [true] :
+      [for label in var.labels : length(label) <= 64 && length(label) >= 2]
+    )
+    error_message = "Labels must be between 2 and 64 characters."
+  }
 }
 
 variable "region" {
