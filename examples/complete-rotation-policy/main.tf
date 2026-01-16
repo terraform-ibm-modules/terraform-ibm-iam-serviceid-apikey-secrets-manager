@@ -90,7 +90,7 @@ resource "ibm_iam_service_policy" "secret_puller_policy" {
 module "dynamic_serviceid_apikey1" {
   source = "../.."
   region = local.sm_region
-  labels = var.resource_tags
+  labels = ["rotation:auto", "type:iam-credentials"]
   #tfsec:ignore:general-secrets-no-plaintext-exposure
   sm_iam_secret_name          = "${var.prefix}-${var.sm_iam_secret_name}"
   sm_iam_secret_description   = "Example of dynamic IAM secret / apikey" #tfsec:ignore:general-secrets-no-plaintext-exposure
