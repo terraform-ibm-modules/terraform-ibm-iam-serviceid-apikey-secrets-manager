@@ -1,5 +1,10 @@
 # Complete with rotation policy example
 
+<!-- BEGIN SCHEMATICS DEPLOY HOOK -->
+<a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-serviceid-apikey-secrets-manager-complete-rotation-policy-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples/complete-rotation-policy"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom;"></a>
+<!-- END SCHEMATICS DEPLOY HOOK -->
+
+
 End to end example with the complete Secrets-Manager objects lifecycle including the dynamic IAM secret and rotation policy.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
@@ -17,8 +22,8 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 | <a name="module_dynamic_serviceid_apikey1"></a> [dynamic\_serviceid\_apikey1](#module\_dynamic\_serviceid\_apikey1) | ../.. | n/a |
 | <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | terraform-ibm-modules/resource-group/ibm | 1.4.7 |
 | <a name="module_secrets_manager"></a> [secrets\_manager](#module\_secrets\_manager) | terraform-ibm-modules/secrets-manager/ibm | 2.12.18 |
-| <a name="module_secrets_manager_group_acct"></a> [secrets\_manager\_group\_acct](#module\_secrets\_manager\_group\_acct) | terraform-ibm-modules/secrets-manager-secret-group/ibm | 1.3.36 |
-| <a name="module_secrets_manager_group_service"></a> [secrets\_manager\_group\_service](#module\_secrets\_manager\_group\_service) | terraform-ibm-modules/secrets-manager-secret-group/ibm | 1.3.36 |
+| <a name="module_secrets_manager_group_acct"></a> [secrets\_manager\_group\_acct](#module\_secrets\_manager\_group\_acct) | terraform-ibm-modules/secrets-manager-secret-group/ibm | 1.3.37 |
+| <a name="module_secrets_manager_group_service"></a> [secrets\_manager\_group\_service](#module\_secrets\_manager\_group\_service) | terraform-ibm-modules/secrets-manager-secret-group/ibm | 1.3.37 |
 
 ### Resources
 
@@ -49,3 +54,7 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 | <a name="output_sm_iam_secret_next_rotation_date"></a> [sm\_iam\_secret\_next\_rotation\_date](#output\_sm\_iam\_secret\_next\_rotation\_date) | Next rotation date for iam\_credential secret |
 | <a name="output_sm_iam_secret_puller_apikey_secret_id"></a> [sm\_iam\_secret\_puller\_apikey\_secret\_id](#output\_sm\_iam\_secret\_puller\_apikey\_secret\_id) | Secrets-Manager IAM secret ID containing ServiceID API key |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+<!-- BEGIN SCHEMATICS DEPLOY TIP HOOK -->
+:information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab
+<!-- END SCHEMATICS DEPLOY TIP HOOK -->
