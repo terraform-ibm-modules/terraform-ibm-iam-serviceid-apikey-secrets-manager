@@ -36,6 +36,7 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_account_id"></a> [account\_id](#input\_account\_id) | The ID of the target account in which the IAM credentials are created. Use this field only if the target account is not the same as the account of the Secrets Manager instance. | `string` | `null` | no |
 | <a name="input_existing_sm_instance_crn"></a> [existing\_sm\_instance\_crn](#input\_existing\_sm\_instance\_crn) | Existing Secrets Manager CRN. If not provided a new instance will be provisioned | `string` | `null` | no |
 | <a name="input_ibmcloud_api_key"></a> [ibmcloud\_api\_key](#input\_ibmcloud\_api\_key) | APIkey that's associated with the account to use, set via environment variable TF\_VAR\_ibmcloud\_api\_key or .tfvars file. | `string` | n/a | yes |
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | Prefix for name of all resource created by this example | `string` | `"test-iam-serviceid-apikey-sm-module"` | no |

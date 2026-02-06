@@ -98,4 +98,5 @@ module "dynamic_serviceid_apikey1" {
   secrets_manager_guid        = module.secrets_manager.secrets_manager_guid
   secret_group_id             = module.secrets_manager_group_service.secret_group_id
   sm_iam_secret_auto_rotation = true
+  account_id                  = var.account_id
 }

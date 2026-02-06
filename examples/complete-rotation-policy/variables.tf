@@ -44,3 +44,9 @@ variable "skip_iam_authorization_policy" {
   description = "Whether to skip the creation of the IAM authorization policies required to enable the IAM credentials engine. If set to false, policies will be created that grants the Secrets Manager instance 'Operator' access to the IAM identity service, and 'Groups Service Member Manage' access to the IAM groups service."
   default     = false
 }
+
+variable "account_id" {
+  description = "The ID of the target account in which the IAM credentials are created. Use this field only if the target account is not the same as the account of the Secrets Manager instance."
+  type        = string
+  default     = null
+}
