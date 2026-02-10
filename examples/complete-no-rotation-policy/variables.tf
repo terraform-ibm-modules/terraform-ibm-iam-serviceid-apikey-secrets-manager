@@ -50,4 +50,17 @@ variable "account_id" {
   description = "The ID of the target account in which the IAM credentials are created. Use this field only if the target account is not the same as the account of the Secrets Manager instance."
   type        = string
   default     = null
+
+
+  validation {
+    condition     = (var.account_id == null || (var.account_id != null && var.ibmcloud_target_account_api_key != null))
+    error_message = "The variable ibmcloud_target_account_api_key must be set when account_id is provided."
+  }
+}
+
+variable "ibmcloud_target_account_api_key" {
+  type        = string
+  description = "IBM Cloud API key for the target account. This key is required for cross-account setups to manage Secrets Manager and IAM resources. If not provided, the value of ibmcloud_api_key is used. Leave this unset when the service ID and Secrets Manager instance are in the same account."
+  sensitive   = true
+  default     = null
 }

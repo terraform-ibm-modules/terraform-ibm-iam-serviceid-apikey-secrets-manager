@@ -67,6 +67,7 @@ module "secrets_manager_group_service" {
 #######################
 
 resource "ibm_iam_service_id" "secret_puller" {
+  provider    = ibm.target-account
   name        = "sid:0.0.1:${var.prefix}-secret-puller:automated:simple-service:secret-manager:"
   description = "ServiceID that can pull secrets from Secret Manager"
 }
