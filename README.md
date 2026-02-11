@@ -86,7 +86,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_account_id"></a> [account\_id](#input\_account\_id) | The ID of the target account in which the IAM credentials are created. Provide this value only if the target account is not the same as the account of the Secrets Manager instance. | `string` | `null` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | Labels that can be used to search for secrets within the instance. Up to 30 labels can be created. Labels can be between 2 and 64 characters. | `list(string)` | `[]` | no |
 | <a name="input_region"></a> [region](#input\_region) | The region of the Secrets Manager instance. If not provided defaults to the region defined in the IBM provider configuration. | `string` | n/a | yes |
 | <a name="input_secret_group_id"></a> [secret\_group\_id](#input\_secret\_group\_id) | Secret Group ID of secret where IAM Secret will be added to, leave default (null) to add in default secret-group | `string` | `null` | no |
@@ -100,6 +99,7 @@ No modules.
 | <a name="input_sm_iam_secret_description"></a> [sm\_iam\_secret\_description](#input\_sm\_iam\_secret\_description) | Description of SM IAM secret (dynamic ServiceID API Key) to be created | `string` | n/a | yes |
 | <a name="input_sm_iam_secret_name"></a> [sm\_iam\_secret\_name](#input\_sm\_iam\_secret\_name) | Name of SM IAM secret (dynamic ServiceID API Key) to be created | `string` | n/a | yes |
 | <a name="input_sm_iam_secret_ttl"></a> [sm\_iam\_secret\_ttl](#input\_sm\_iam\_secret\_ttl) | Specify validity / lease duration of ServiceID API key. Accepted values and formats are: SECONDS, Xm or Xh (where X is the number of minutes or hours appended to m or h respectively) | `string` | `"7776000"` | no |
+| <a name="input_target_account_id"></a> [target\_account\_id](#input\_target\_account\_id) | The ID of the target account in which the IAM credentials are created. Provide this value only if the target account is not the same as the account of the Secrets Manager instance. | `string` | `null` | no |
 
 ### Outputs
 

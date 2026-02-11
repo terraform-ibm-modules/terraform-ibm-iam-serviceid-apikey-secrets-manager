@@ -46,21 +46,21 @@ variable "skip_iam_authorization_policy" {
   default     = false
 }
 
-variable "account_id" {
+variable "target_account_id" {
   description = "The ID of the target account in which the IAM credentials are created. Provide this value only if the target account is not the same as the account of the Secrets Manager instance."
   type        = string
   default     = null
 
 
   validation {
-    condition     = (var.account_id == null || (var.account_id != null && var.ibmcloud_target_account_api_key != null))
-    error_message = "The variable ibmcloud_target_account_api_key must be set when account_id is provided."
+    condition     = (var.target_account_id == null || (var.target_account_id != null && var.ibmcloud_target_account_api_key != null))
+    error_message = "The variable `ibmcloud_target_account_api_key` must be set when `target_account_id` is provided."
   }
 }
 
 variable "ibmcloud_target_account_api_key" {
   type        = string
-  description = "The IBM Cloud API key for the target account that owns the Service ID. Specify this key to manage IAM resources in an account that's different from the Secrets Manager instance. If not specified, the `ibmcloud_api_key` variable is used. Not used if the service ID and Secrets Manager instance are in the same account."
+  description = "The IBM Cloud API key for the target account in which Service ID and its API key will be created. If the Secrets Manager instance and the Service ID are in the same account, this key is not required."
   sensitive   = true
   default     = null
 }

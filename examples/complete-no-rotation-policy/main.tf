@@ -101,5 +101,5 @@ module "dynamic_serviceid_apikey1" {
   secrets_manager_guid      = module.secrets_manager.secrets_manager_guid
   secret_group_id           = module.secrets_manager_group_service.secret_group_id
   service_endpoints         = "private"
-  account_id                = var.account_id
+  target_account_id         = var.target_account_id
 }

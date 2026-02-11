@@ -103,7 +103,7 @@ variable "sm_iam_secret_auto_rotation_interval" {
   }
 }
 
-variable "account_id" {
+variable "target_account_id" {
   description = "The ID of the target account in which the IAM credentials are created. Provide this value only if the target account is not the same as the account of the Secrets Manager instance."
   type        = string
   default     = null
