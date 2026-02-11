@@ -86,7 +86,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_account_id"></a> [account\_id](#input\_account\_id) | The ID of the target account in which the IAM credentials are created. Use this field only if the target account is not the same as the account of the Secrets Manager instance. | `string` | `null` | no |
+| <a name="input_account_id"></a> [account\_id](#input\_account\_id) | The ID of the target account in which the IAM credentials are created. Provide this value only if the target account is not the same as the account of the Secrets Manager instance. | `string` | `null` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | Labels that can be used to search for secrets within the instance. Up to 30 labels can be created. Labels can be between 2 and 64 characters. | `list(string)` | `[]` | no |
 | <a name="input_region"></a> [region](#input\_region) | The region of the Secrets Manager instance. If not provided defaults to the region defined in the IBM provider configuration. | `string` | n/a | yes |
 | <a name="input_secret_group_id"></a> [secret\_group\_id](#input\_secret\_group\_id) | Secret Group ID of secret where IAM Secret will be added to, leave default (null) to add in default secret-group | `string` | `null` | no |
