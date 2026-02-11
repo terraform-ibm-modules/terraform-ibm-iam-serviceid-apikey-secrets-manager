@@ -38,12 +38,14 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 |------|-------------|------|---------|:--------:|
 | <a name="input_existing_sm_instance_crn"></a> [existing\_sm\_instance\_crn](#input\_existing\_sm\_instance\_crn) | Existing Secrets Manager CRN. If not provided a new instance will be provisioned | `string` | `null` | no |
 | <a name="input_ibmcloud_api_key"></a> [ibmcloud\_api\_key](#input\_ibmcloud\_api\_key) | APIkey that's associated with the account to use, set via environment variable TF\_VAR\_ibmcloud\_api\_key or .tfvars file. | `string` | n/a | yes |
+| <a name="input_ibmcloud_target_account_api_key"></a> [ibmcloud\_target\_account\_api\_key](#input\_ibmcloud\_target\_account\_api\_key) | The IBM Cloud API key for the target account in which Service ID and its API key will be created. If the Secrets Manager instance and the Service ID are in the same account, this key is not required. | `string` | `null` | no |
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | Prefix for name of all resource created by this example | `string` | `"test-iam-serviceid-apikey"` | no |
 | <a name="input_region"></a> [region](#input\_region) | Region where resources will be created | `string` | `"au-syd"` | no |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | An existing resource group name to use for this example, if unset a new resource group will be created | `string` | `null` | no |
 | <a name="input_resource_tags"></a> [resource\_tags](#input\_resource\_tags) | Optional list of tags to be added to created resources | `list(string)` | `[]` | no |
 | <a name="input_skip_iam_authorization_policy"></a> [skip\_iam\_authorization\_policy](#input\_skip\_iam\_authorization\_policy) | Whether to skip the creation of the IAM authorization policies required to enable the IAM credentials engine. If set to false, policies will be created that grants the Secrets Manager instance 'Operator' access to the IAM identity service, and 'Groups Service Member Manage' access to the IAM groups service. | `bool` | `false` | no |
 | <a name="input_sm_iam_secret_name"></a> [sm\_iam\_secret\_name](#input\_sm\_iam\_secret\_name) | Name of SM IAM secret (dynamic ServiceID API Key) to be created | `string` | `"sm-iam-secret-puller"` | no |
+| <a name="input_target_account_id"></a> [target\_account\_id](#input\_target\_account\_id) | The ID of the target account in which the IAM credentials are created. Provide this value only if the target account is not the same as the account of the Secrets Manager instance. | `string` | `null` | no |
 
 ### Outputs
 

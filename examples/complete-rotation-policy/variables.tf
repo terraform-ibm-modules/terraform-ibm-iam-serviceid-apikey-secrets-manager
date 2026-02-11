@@ -44,3 +44,21 @@ variable "skip_iam_authorization_policy" {
   description = "Whether to skip the creation of the IAM authorization policies required to enable the IAM credentials engine. If set to false, policies will be created that grants the Secrets Manager instance 'Operator' access to the IAM identity service, and 'Groups Service Member Manage' access to the IAM groups service."
   default     = false
 }
+
+variable "target_account_id" {
+  description = "The ID of the target account in which the IAM credentials are created. Provide this value only if the target account is not the same as the account of the Secrets Manager instance."
+  type        = string
+  default     = null
+
+  validation {
+    condition     = (var.target_account_id == null || (var.target_account_id != null && var.ibmcloud_target_account_api_key != null))
+    error_message = "The variable `ibmcloud_target_account_api_key` must be set when `target_account_id` is provided."
+  }
+}
+
+variable "ibmcloud_target_account_api_key" {
+  type        = string
+  description = "The IBM Cloud API key for the target account in which Service ID and its API key will be created. If the Secrets Manager instance and the Service ID are in the same account, this key is not required."
+  sensitive   = true
+  default     = null
+}

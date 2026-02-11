@@ -99,6 +99,7 @@ No modules.
 | <a name="input_sm_iam_secret_description"></a> [sm\_iam\_secret\_description](#input\_sm\_iam\_secret\_description) | Description of SM IAM secret (dynamic ServiceID API Key) to be created | `string` | n/a | yes |
 | <a name="input_sm_iam_secret_name"></a> [sm\_iam\_secret\_name](#input\_sm\_iam\_secret\_name) | Name of SM IAM secret (dynamic ServiceID API Key) to be created | `string` | n/a | yes |
 | <a name="input_sm_iam_secret_ttl"></a> [sm\_iam\_secret\_ttl](#input\_sm\_iam\_secret\_ttl) | Specify validity / lease duration of ServiceID API key. Accepted values and formats are: SECONDS, Xm or Xh (where X is the number of minutes or hours appended to m or h respectively) | `string` | `"7776000"` | no |
+| <a name="input_target_account_id"></a> [target\_account\_id](#input\_target\_account\_id) | The ID of the target account in which the IAM credentials are created. Provide this value only if the target account is not the same as the account of the Secrets Manager instance. | `string` | `null` | no |
 
 ### Outputs
 

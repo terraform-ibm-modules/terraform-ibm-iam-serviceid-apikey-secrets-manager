@@ -67,6 +67,7 @@ module "secrets_manager_group_service" {
 #######################
 
 resource "ibm_iam_service_id" "secret_puller" {
+  provider    = ibm.target-account
   name        = "sid:0.0.1:${var.prefix}-secret-puller:automated:simple-service:secret-manager:"
   description = "ServiceID that can pull secrets from Secret Manager"
 }
@@ -98,4 +99,5 @@ module "dynamic_serviceid_apikey1" {
   secrets_manager_guid        = module.secrets_manager.secrets_manager_guid
   secret_group_id             = module.secrets_manager_group_service.secret_group_id
   sm_iam_secret_auto_rotation = true
+  target_account_id           = var.target_account_id
 }
