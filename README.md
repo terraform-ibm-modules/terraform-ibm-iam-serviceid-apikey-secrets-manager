@@ -16,12 +16,23 @@ In addition to rotation when the TTL or lease expires, you can create a rotation
 
 <!-- BEGIN OVERVIEW HOOK -->
 ## Overview
-* [terraform-ibm-iam-serviceid-apikey-secrets-manager](#terraform-ibm-iam-serviceid-apikey-secrets-manager)
-* [Examples](./examples)
-:information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab
-    * <a href="./examples/complete-no-rotation-policy">Complete with no rotation example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-serviceid-apikey-secrets-manager-complete-no-rotation-policy-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples/complete-no-rotation-policy"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-    * <a href="./examples/complete-rotation-policy">Complete with rotation policy example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-serviceid-apikey-secrets-manager-complete-rotation-policy-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples/complete-rotation-policy"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-* [Contributing](#contributing)
+<ul>
+  <li><a href="#terraform-ibm-iam-serviceid-apikey-secrets-manager">terraform-ibm-iam-serviceid-apikey-secrets-manager</a></li>
+  <li><a href="./examples">Examples</a>
+    <ul>
+      <li>
+        <a href="./examples/complete-no-rotation-policy">Complete with no rotation example</a>
+        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-serviceid-apikey-secrets-manager-complete-no-rotation-policy-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples/complete-no-rotation-policy"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+      </li>
+      <li>
+        <a href="./examples/complete-rotation-policy">Complete with rotation policy example</a>
+        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-serviceid-apikey-secrets-manager-complete-rotation-policy-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples/complete-rotation-policy"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+      </li>
+    </ul>
+    ℹ️ Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab.
+  </li>
+  <li><a href="#contributing">Contributing</a></li>
+</ul>
 <!-- END OVERVIEW HOOK -->
 
 ## terraform-ibm-iam-serviceid-apikey-secrets-manager
