@@ -27,7 +27,7 @@ module "resource_group" {
 
 module "secrets_manager" {
   source                        = "terraform-ibm-modules/secrets-manager/ibm"
-  version                       = "2.14.2"
+  version                       = "2.15.0"
   existing_sm_instance_crn      = var.existing_sm_instance_crn
   skip_iam_authorization_policy = var.skip_iam_authorization_policy
   resource_group_id             = module.resource_group.resource_group_id
@@ -35,7 +35,7 @@ module "secrets_manager" {
   secrets_manager_name          = "${var.prefix}-secrets-manager"
   sm_service_plan               = "trial"
   allowed_network               = "public-and-private"
-  sm_tags                       = var.resource_tags
+  resource_tags                 = var.resource_tags
 }
 
 # Additional Secrets-Manager Secret-Group for SERVICE level secrets
