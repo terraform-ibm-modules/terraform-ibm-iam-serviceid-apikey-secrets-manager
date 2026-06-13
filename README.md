@@ -18,14 +18,14 @@ In addition to rotation when the TTL or lease expires, you can create a rotation
 ## Overview
 <ul>
   <li><a href="#terraform-ibm-iam-serviceid-apikey-secrets-manager">terraform-ibm-iam-serviceid-apikey-secrets-manager</a></li>
-  <li><a href="./examples">Examples</a>
+  <li><a href="https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples">Examples</a>
     <ul>
       <li>
-        <a href="./examples/complete-no-rotation-policy">Complete with no rotation example</a>
+        <a href="https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples/complete-no-rotation-policy">Complete with no rotation example</a>
         <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-serviceid-apikey-secrets-manager-complete-no-rotation-policy-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples/complete-no-rotation-policy"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
       </li>
       <li>
-        <a href="./examples/complete-rotation-policy">Complete with rotation policy example</a>
+        <a href="https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples/complete-rotation-policy">Complete with rotation policy example</a>
         <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-serviceid-apikey-secrets-manager-complete-rotation-policy-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-serviceid-apikey-secrets-manager/tree/main/examples/complete-rotation-policy"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
       </li>
     </ul>
