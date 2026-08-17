@@ -32,6 +32,11 @@ variable "sm_iam_secret_ttl" {
   type        = string
   description = "Specify validity / lease duration of ServiceID API key. Accepted values and formats are: SECONDS, Xm or Xh (where X is the number of minutes or hours appended to m or h respectively)"
   default     = "7776000" #tfsec:ignore:general-secrets-no-plaintext-exposure Default set to 90days
+
+  validation {
+    condition     = (var.sm_iam_secret_ttl >= 60) && (var.sm_iam_secret_ttl <= 7776000)
+    error_message = "TTL must be between 60 seconds and 7776000 seconds (90 days)."
+  }
 }
 
 variable "sm_iam_secret_api_key_persistence" {
@@ -77,8 +82,8 @@ variable "service_endpoints" {
 
 variable "sm_iam_secret_auto_rotation" {
   type        = bool
-  description = "Set to `true` to configure automatic rotation policy."
-  default     = false
+  description = "Set to `false` to disable automatic rotation policy."
+  default     = true
 }
 
 variable "sm_iam_secret_auto_rotation_unit" {
