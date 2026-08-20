@@ -110,7 +110,7 @@ No modules.
 | <a name="input_sm_iam_secret_auto_rotation_unit"></a> [sm\_iam\_secret\_auto\_rotation\_unit](#input\_sm\_iam\_secret\_auto\_rotation\_unit) | Specifies the unit of time for rotation policy. Acceptable values are `day` or `month`. | `string` | `"day"` | no |
 | <a name="input_sm_iam_secret_description"></a> [sm\_iam\_secret\_description](#input\_sm\_iam\_secret\_description) | Description of SM IAM secret (dynamic ServiceID API Key) to be created | `string` | n/a | yes |
 | <a name="input_sm_iam_secret_name"></a> [sm\_iam\_secret\_name](#input\_sm\_iam\_secret\_name) | Name of SM IAM secret (dynamic ServiceID API Key) to be created | `string` | n/a | yes |
-| <a name="input_sm_iam_secret_ttl"></a> [sm\_iam\_secret\_ttl](#input\_sm\_iam\_secret\_ttl) | Specify validity / lease duration of ServiceID API key in seconds. Must be an integer string between 60 and 7776000 (90 days). | `string` | `"7776000"` | no |
+| <a name="input_sm_iam_secret_ttl"></a> [sm\_iam\_secret\_ttl](#input\_sm\_iam\_secret\_ttl) | Specify validity / lease duration of ServiceID API key in seconds. Must be an integer between 60 and 7776000 (90 days). | `number` | `7776000` | no |
 | <a name="input_target_account_id"></a> [target\_account\_id](#input\_target\_account\_id) | The ID of the target account in which the IAM credentials are created. Provide this value only if the target account is not the same as the account of the Secrets Manager instance. | `string` | `null` | no |
 
 ### Outputs
