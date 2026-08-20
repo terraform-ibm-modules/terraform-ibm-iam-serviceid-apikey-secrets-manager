@@ -29,9 +29,9 @@ variable "secret_group_id" {
 }
 
 variable "sm_iam_secret_ttl" {
-  type        = string
-  description = "Specify validity / lease duration of ServiceID API key. Accepted values and formats are: SECONDS, Xm or Xh (where X is the number of minutes or hours appended to m or h respectively)"
-  default     = "7776000" #tfsec:ignore:general-secrets-no-plaintext-exposure Default set to 90days
+  type        = number
+  description = "Specify validity / lease duration of ServiceID API key in seconds. Must be an integer between 60 and 7776000 (90 days)."
+  default     = 7776000 #tfsec:ignore:general-secrets-no-plaintext-exposure Default set to 90days
 }
 
 variable "sm_iam_secret_api_key_persistence" {
@@ -77,8 +77,8 @@ variable "service_endpoints" {
 
 variable "sm_iam_secret_auto_rotation" {
   type        = bool
-  description = "Set to `true` to configure automatic rotation policy."
-  default     = false
+  description = "Set to `false` to disable automatic rotation policy."
+  default     = true
 }
 
 variable "sm_iam_secret_auto_rotation_unit" {
