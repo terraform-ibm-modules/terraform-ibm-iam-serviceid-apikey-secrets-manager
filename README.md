@@ -80,7 +80,7 @@ You need the following permissions to run this module.
 ### Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
 | <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >=1.70.0, < 3.0.0 |
 
@@ -91,13 +91,13 @@ No modules.
 ### Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [ibm_sm_iam_credentials_secret.sm_iam_credentials_secret](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sm_iam_credentials_secret) | resource |
 
 ### Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_labels"></a> [labels](#input\_labels) | Labels that can be used to search for secrets within the instance. Up to 30 labels can be created. Labels can be between 2 and 64 characters. | `list(string)` | `[]` | no |
 | <a name="input_region"></a> [region](#input\_region) | The region of the Secrets Manager instance. If not provided defaults to the region defined in the IBM provider configuration. | `string` | n/a | yes |
 | <a name="input_secret_group_id"></a> [secret\_group\_id](#input\_secret\_group\_id) | Secret Group ID of secret where IAM Secret will be added to, leave default (null) to add in default secret-group | `string` | `null` | no |
@@ -116,7 +116,7 @@ No modules.
 ### Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_secret_id"></a> [secret\_id](#output\_secret\_id) | Secrets-Manager IAM secret ID containing ServiceID API key |
 | <a name="output_sm_iam_secret_next_rotation_date"></a> [sm\_iam\_secret\_next\_rotation\_date](#output\_sm\_iam\_secret\_next\_rotation\_date) | Next rotation date for iam\_credential secret |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

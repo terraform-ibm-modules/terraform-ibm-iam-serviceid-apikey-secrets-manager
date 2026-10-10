@@ -15,14 +15,14 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 ### Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
 | <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.70.0, < 3.0.0 |
 
 ### Modules
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | <a name="module_dynamic_serviceid_apikey1"></a> [dynamic\_serviceid\_apikey1](#module\_dynamic\_serviceid\_apikey1) | ../.. | n/a |
 | <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | terraform-ibm-modules/resource-group/ibm | 1.6.1 |
 | <a name="module_secrets_manager"></a> [secrets\_manager](#module\_secrets\_manager) | terraform-ibm-modules/secrets-manager/ibm | 3.0.0 |
@@ -32,14 +32,14 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 ### Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [ibm_iam_service_id.secret_puller](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_service_id) | resource |
 | [ibm_iam_service_policy.secret_puller_policy](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_service_policy) | resource |
 
 ### Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_existing_sm_instance_crn"></a> [existing\_sm\_instance\_crn](#input\_existing\_sm\_instance\_crn) | Existing Secrets Manager CRN. If not provided a new instance will be provisioned | `string` | `null` | no |
 | <a name="input_ibmcloud_api_key"></a> [ibmcloud\_api\_key](#input\_ibmcloud\_api\_key) | APIkey that's associated with the account to use, set via environment variable TF\_VAR\_ibmcloud\_api\_key or .tfvars file. | `string` | n/a | yes |
 | <a name="input_ibmcloud_target_account_api_key"></a> [ibmcloud\_target\_account\_api\_key](#input\_ibmcloud\_target\_account\_api\_key) | The IBM Cloud API key for the target account in which Service ID and its API key will be created. If the Secrets Manager instance and the Service ID are in the same account, this key is not required. | `string` | `null` | no |
@@ -54,7 +54,7 @@ End to end example with the complete Secrets-Manager objects lifecycle including
 ### Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_secrets_manager_crn"></a> [secrets\_manager\_crn](#output\_secrets\_manager\_crn) | CRN of Secrets-Manager instance in which IAM engine was configured |
 | <a name="output_service_secret_group_id"></a> [service\_secret\_group\_id](#output\_service\_secret\_group\_id) | Secret-group ID containing IAM secret |
 | <a name="output_sm_iam_secret_next_rotation_date"></a> [sm\_iam\_secret\_next\_rotation\_date](#output\_sm\_iam\_secret\_next\_rotation\_date) | Next rotation date for iam\_credential secret |
